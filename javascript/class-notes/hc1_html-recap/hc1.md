@@ -172,6 +172,7 @@ and(ve) operatöründe ilki false ise ilk false yi ilki true ise 2. true yu alı
 
 ### ??= Operatörü Nullish birleştirme atama operatörü, iki değer arasında kullanılır. İlk değer tanımsız veya boş ise ikinci değer atanır.
 
+
 <font color="orange">
 let x = "Volvo" + 16 + 4;<br>
   - Result:
