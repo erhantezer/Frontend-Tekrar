@@ -32,3 +32,16 @@ const myCar = {
     year : 1965,
     color : 'Black'
   }
+
+  myCar.color="Red"
+  myCar.sanroof =true;
+  console.log(myCar);
+
+  myCar.age = function (params) {
+    console.log(params - this.year)
+  }
+  
+  myCar.age(2022)
+
+  delete myCar["sanroof"]
+  console.log(myCar);
