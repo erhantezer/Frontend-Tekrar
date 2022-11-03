@@ -1,49 +1,34 @@
-// let x = 'hello ';
-// let y = "world";
-// console.log(x + y);
-// let z = 3;
-// console.log(x + z)
-// console.log(z + x)
+// let e = +prompt("bir sayı giriniz");
+//! başına artı (+) işareti konulursa number algılanır
+//! artı konduğunda iptale basılırsa  0 değerini alır
+//! artı dğeri yokken iptale basılırsa null döndürür ve tipi object olur
+// console.log(e);
+// console.log(typeof(e))
 
-// let a = 5;
-// let b = 4;
-// let c = "7";
-// console.log(c+b+a)
-// console.log(a+b+c)
-
-// console.log(c++)
-// console.log(c)
-// console.log(++a)
-// console.log(a)
-
-// let k = a = b = c;
-// console.log(k)
-
-// console.log(null===null)
-// console.log(null==null)
-// console.log(null==false)
-// console.log(null== true)
-// console.log(NaN==NaN)
-// console.log(typeof(NaN));
+// let i = 999_999_999_999_999;
+// console.log(i)
+// console.log(isNaN(i))
 
 
-// let d;
-// let e = 'Hello World'
-// console.log(d ?? e)
-// console.log(e ?? d)
+// let x;
 
-// let f = null;
+// do {
+//   x = prompt('Enter a Number :')
+// } while (isNaN(x));
 
-// console.log(f ?? d)
+// console.log(x * x);
 
-// console.log(d ?? 0) 
-//? Boş birleştirme operatörü (??), sol taraftaki 
-//? işleneni boş veya tanımsız olduğunda sağ taraftaki 
-//? işlenenini, aksi takdirde sol taraftaki işlenenini 
-//? döndüren mantıksal bir operatördür.
 
-// const foo = { someFooProp: "hi" };
+// console.log(015+025)
 
-// console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "HI"
-// console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not available"
+let userName = 'Mark';
 
+let p = `Merhaba ${userName}`;
+console.log(p)
+
+const myCar = {
+    make : 'ford',
+    model : 'Mustang',
+    year : 1965,
+    color : 'Black'
+  }
