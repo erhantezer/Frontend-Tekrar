@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relative-Absolute</title>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POSITION</title>
     <style>
-        body{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
-        .box1{
-            position: absolute;
-            top: 0;
-            left: 200px;
-            background-color: orchid;
-            height: 400px;
-            width: 400px;
-            z-index: 3;
-        }
-        .box2{
-            position: absolute;
-            top: 80px;
-            left: 100px;
-            background-color: brown;
-            height: 400px;
-            width: 400px;
-            z-index: 2;
-        }
-        .box3{
-            background-color: chocolate;
-            height: 400px;
-            width: 400px;
-            position: absolute;
-            top: 200px;
-            left: 170px;
-            z-index: 1;
-        }
+      /* *{margin:0;} */
+      .box {
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        position: static;
+      }
+
+      .box1 {
+        background-color: darkcyan;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+
+        position: relative;
+        top: 20px;
+        left: 50px;
+        /* diğer elemanları kıpırdatmadan,olması gereken yerden body ye göre kıpırdar */
+      }
+
+      .box2 {
+        background-color: chocolate;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        position: absolute;
+        /* 0-0 noktasına göre */
+        top: 20px;
+        left: 50px;
+      }
     </style>
-
-
-</head>
-<body>
+  </head>
+  <body>
+    <div class="box">box</div>
     <div class="box1">box1</div>
     <div class="box2">box2</div>
-    <div class="box3">box3</div>
-</body>
+  </body>
 </html>
