@@ -6,14 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Absol-relat-Parent</title>
 
+<style>
 
+        body{
+           margin: 0; 
+           padding: 0; 
+           box-sizing: border-box;
+        }
+        .bigBox{
+            background-color: indianred;
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+            position: relative;
+            top: 100px;
+            left: 60px;
+        }
+        .box1{
+            background-color: limegreen;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            
+        }
+        .box2{
+            background-color: lightslategray;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            /*parent yoksa ya da (parent varken) parentta position yoksa 0-0 a göre konum alıyor, varsa parent  ın 0-0 noktasına  göre konum alıyor,  */
+        }
 
-
+</style>
 
 </head>
 <body>
     
-    
+    <!-- div.bigbox>div.box${box$}*2 -->
+    <div class="bigBox">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+      </div>
 
 
 </body>
