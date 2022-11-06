@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative-Absolute</title>
+
+    <style>
+        body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        .box1{
+            position: absolute;
+            top: 0;
+            left: 200px;
+            background-color: orchid;
+            height: 400px;
+            width: 400px;
+            z-index: 3;
+        }
+        .box2{
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            background-color: brown;
+            height: 400px;
+            width: 400px;
+            z-index: 2;
+        }
+        .box3{
+            background-color: chocolate;
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            top: 200px;
+            left: 170px;
+            z-index: 1;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>
