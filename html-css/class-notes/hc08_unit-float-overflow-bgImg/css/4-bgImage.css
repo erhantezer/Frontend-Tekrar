@@ -1,0 +1,23 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+color: white;
+}
+
+body{
+    background-image: url("../assets/img/tree.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    height:100vh;
+}
+header{
+    
+    text-align: center;
+}
+.bg {
+margin-top: 4rem;
+
+}
