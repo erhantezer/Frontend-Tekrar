@@ -5,3 +5,27 @@ margin: 0;
 .img-float{
     float: left;
 }
+
+.clearfix{
+clear: both;
+}
+
+.box {
+    float: left;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .box1 {
+    background-color: yellowgreen;
+    width: 10%;
+  }
+  
+  .box2 {
+    background-color: pink;
+    width: 50%;
+  }
+  
+  .box3 {
+    background-color: purple;
+    width: 20%;
+  }
