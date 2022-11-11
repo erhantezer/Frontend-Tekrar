@@ -1,5 +1,26 @@
 * {
-  font-family: Roboto;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  box-sizing: border-box;
 }
 
 /*************** AÇILIR MENU **************/
+/*! inline elementlerin hover olmaz örnek i, a, span vb......*/
+nav.acilir-menu {
+  width: 25vw;
+  /* border: 1px solid red; */
+  height: 25vh;
+}
+
+nav i{
+ margin-left: 3rem;
+ /* border: 1px solid red; */
+ font-size: xx-large;
+}
+
+nav.acilir-menu ul {
+display: none;
+}
+
+nav.acilir-menu:hover ul {
+display: block;
+}
