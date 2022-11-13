@@ -10,3 +10,40 @@ font-size: 2rem;
 width: 50vw;
 margin: 2rem auto;
 }
+
+/************ ROTATE **************/
+/*! döndürme yapar*/
+.yazi1 {
+background-color: aqua;
+transform: rotateX(120deg);
+/*! 90 ve 270 derecelerde yazılar tam dik olduklarından ve 3-boyutlu olarak bakamadığımız için gözükmezler */
+}
+
+.yazi2 {
+background-color: hotpink;
+transform: rotateY(120deg);
+}
+
+.yazi3 {
+     /*? rotate, Elementi saat yönünde ya da tersi istikamette döndürür. */
+background-color: chocolate;
+/* transform: rotate(45deg); */
+transform: rotate(-45deg);
+}
+
+/*************** SCALE ************/
+/*! boyut büyütüp küçültür*/
+.yazi4 {
+background-color: violet;
+}
+.yazi4:hover {
+transform: scaleX(1.5) scaleY(3);
+}
+
+.yazi5 {
+background-color: yellowgreen;
+}
+.yazi5:hover {
+/* transform: scale(2, 3); */
+transform: scale(1.05);   /*!her iki eksende %5 büyüme olur*/
+}
