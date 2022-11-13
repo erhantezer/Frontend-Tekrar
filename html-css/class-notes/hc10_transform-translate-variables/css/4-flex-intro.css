@@ -1,0 +1,29 @@
+body{
+text-align: center;
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.container{
+background-color: chocolate;
+display: flex;
+/*! Elemanların diziliş yönü : column, row, row-reverse, column-reverse*/
+flex-direction: row;
+
+/*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
+flex-wrap: wrap;
+
+/*! Yatay Hizalama: Justify-center
+/** flex-start, flex-end,center, space-around,space-evenly, space-between*/
+justify-content: space-between;
+
+}
+
+
+.container div {
+    width: 5rem;
+    height: 5rem;
+    background-color: violet;
+    margin: 1rem;
+}
