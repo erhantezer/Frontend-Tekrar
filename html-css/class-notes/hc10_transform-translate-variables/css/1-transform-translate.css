@@ -25,7 +25,7 @@ transform: rotateY(120deg);
 }
 
 .yazi3 {
-     /*? rotate, Elementi saat yönünde ya da tersi istikamette döndürür. */
+ /*? rotate, Elementi saat yönünde ya da tersi istikamette döndürür. */
 background-color: chocolate;
 /* transform: rotate(45deg); */
 transform: rotate(-45deg);
@@ -46,4 +46,27 @@ background-color: yellowgreen;
 .yazi5:hover {
 /* transform: scale(2, 3); */
 transform: scale(1.05);   /*!her iki eksende %5 büyüme olur*/
+}
+
+/*************** TRANSLATE ************/
+/*! sağa sola yukarı aşağıya hareket eder */
+.translate {
+background-color: coral;
+width: 8rem;
+height: 6rem;
+margin: 0.6rem auto;
+color: white;
+transition: transform 1s; /*! geçişlerin zamanlamasını ayarlar*/
+}
+
+.x:hover {
+transform: translateX(50px);
+}
+
+.y:hover {
+transform: translateY(50px);
+}
+
+.xy:hover {
+transform: translate(50px,50px);
 }
