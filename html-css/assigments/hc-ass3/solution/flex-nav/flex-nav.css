@@ -1,0 +1,85 @@
+/**Renk temasını import ettik*/
+@import "theme.css";
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-monteserrat);
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 0.5rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .left,
+nav .middle,
+nav .right {
+   width: 33%;
+  /**elemanların büyümesine izin ver*/
+  /* flex-grow: 1; */
+   /*!Tüm elemanların eşit miktarda alan tutabilmesine izin ver.*/
+  /* flex-basis: 0; */
+}
+
+nav .left {
+    background-color: var(--gri-8);
+    box-shadow: var(--açık-gölge);
+    padding: 2px;
+    border-radius: 8px 0 0 8px; 
+}
+
+nav .left img {
+    width: 40px;
+    height: 40px;
+    padding: 0.2rem;
+}
+
+nav .middle {
+    text-align: center;
+    background-color: var(--mavi-10);
+    box-shadow: var(--koyu-gölge);
+    border-radius: 10px;
+    
+}
+
+nav .middle .item {
+
+    display: inline-block;
+    text-decoration: none;
+    padding: 24px;
+    color: var(--siyah);
+    transition: background-color 1s, color 0.5s;
+}  
+
+nav .middle .item:hover {
+    background-color: var(--mavi-5);
+    border-radius: 10px;
+    color: var(--beyaz);
+}
+
+nav .right {
+    text-align: right;
+    background-color: var(--mavi-7);
+    box-shadow: var(--açık-gölge);
+    /* padding: 2px; */
+    border-radius:0 8px 8px 0; 
+}
+
+nav .right i {
+    color: var(--siyah);
+    font-size: 40px;
+    transition: all 1s;
+    padding: 0.5rem;
+    
+}
+
+nav .right i:hover {
+    font-size: 45px;
+    color: chocolate;
+}
+
