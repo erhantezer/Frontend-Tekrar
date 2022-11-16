@@ -5,10 +5,10 @@ box-sizing: border-box;
 .container {
 display: grid;
 grid-template-areas:
-    "header header header header"
-    "nav nav nav nav"
-    "aside  main main main"
-    "footer footer footer footer";
+  "header header header header"
+  "nav nav nav nav"
+  "aside  main main main"
+  "footer footer footer footer";
 
 grid-template-columns: repeat(4,1fr);
 grid-template-rows: 200px 10vh calc(100vh - (200px + 20vh)) 10vh;
