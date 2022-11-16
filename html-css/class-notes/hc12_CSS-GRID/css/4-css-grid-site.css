@@ -39,13 +39,13 @@ overflow: auto;
     background-color: khaki;
   }
 
-  #main {
+#main {
     grid-area: main;
     padding: 1rem;
     background-color: lightcoral;
   }
   
-  #footer {
+#footer {
     grid-area: footer;
     background-color: lightskyblue;
   }
