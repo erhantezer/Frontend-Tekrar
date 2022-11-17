@@ -87,6 +87,14 @@ main {
     }
     }
     img{
-    width: 20rem;
+    width: 30%;
+    min-width: 300px;
+    max-width: 400px;
     }
 }
+
+//*******  CARDS *********/
+
+//*****************
+//! @MIXIN
+//*****************

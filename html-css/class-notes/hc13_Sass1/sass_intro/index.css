@@ -64,5 +64,7 @@ main button:hover {
   cursor: pointer;
 }
 main img {
-  width: 20rem;
+  width: 30%;
+  min-width: 300px;
+  max-width: 400px;
 }/*# sourceMappingURL=index.css.map */
