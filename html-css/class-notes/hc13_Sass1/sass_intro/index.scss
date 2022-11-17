@@ -178,3 +178,20 @@ $textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
         }
     }
 }
+
+//***********************************************
+//! IF-ELSE
+//************************************************
+
+$dark: 1;
+
+.footer {
+  @if $dark==3 {
+    background-color: white;
+    color: black;
+  } @else if $dark==2 {
+    background-color: gray;
+  } @else {
+    background-color: green;
+  }
+}
