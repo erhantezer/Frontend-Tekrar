@@ -33,10 +33,60 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem;
- img{
-    width: 80px;
-    border: $myBorder;
+    img{
+        width: 80px;
+        border: $myBorder;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    nav{
+        ul {
+                list-style-type: none;
+                li {
+                //! içinde bulundğumuz elementi refere etmek için & işareti kullanılır.
+                display: inline-block;
+                &:hover {
+                text-decoration:underline;
+                        }
+                    a {
+                        color: $fontColor;
+                        text-decoration: none;
+                        padding: 0.5rem;
+                    }
+                }
+        }
+    }
+}
+
+//*******  MAIN *********/
+
+main {
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bannerBgColor;
+        padding: 1.5rem;
+        line-height: 4rem;
+    }
+    button{
+    display: inline-block;
+    width: 9rem;
+    padding: 1rem;
+    background-color: $navBgColor;
+    border: none;
     border-radius: 20px;
-    padding: 5px;
- }
+    color: $fontColor;
+    font-weight: 900;
+    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+    &:hover {
+    background-color: $bgColor;
+    color: azure;
+    cursor: pointer;
+    }
+    }
+    img{
+    width: 20rem;
+    }
 }

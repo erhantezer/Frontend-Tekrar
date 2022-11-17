@@ -22,4 +22,47 @@ header img {
   border: 2px solid rgb(175, 29, 29);
   border-radius: 20px;
   padding: 5px;
+}
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li:hover {
+  text-decoration: underline;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+main .banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cc6699;
+  padding: 1.5rem;
+  line-height: 4rem;
+}
+main button {
+  display: inline-block;
+  width: 9rem;
+  padding: 1rem;
+  background-color: #30a7c3;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 900;
+  margin-right: 0.5rem;
+  margin-top: 1.5rem;
+}
+main button:hover {
+  background-color: pink;
+  color: azure;
+  cursor: pointer;
+}
+main img {
+  width: 20rem;
 }/*# sourceMappingURL=index.css.map */
