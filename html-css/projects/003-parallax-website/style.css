@@ -1,0 +1,141 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.container {
+    opacity: 0.7;
+    font-family: 'Lato', sans-serif;
+    line-height: 28px;
+}
+.dv {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div1 {
+    background-image: url(./img/bg.jpg);
+   
+    /* margin: auto; */
+}
+.div1 h1 {
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    border-radius: 36px 0 36px 0;
+    outline: 0.6rem inset purple;
+    outline-offset: 1.2rem;
+
+}
+
+.fs {
+    text-align: center;
+    padding: 3rem;
+    
+}
+.fs h2 {
+    margin: 2rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.div2{
+    background-image: url(./img/bg2.jpg);
+}
+.div2 img{
+width: 28rem;
+}
+
+.aws {
+    text-align: center;
+    padding: 3rem;
+    background-color: black;
+    color: white;
+}
+
+.aws h2 {
+    margin: 2rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+    
+}
+.div3{
+    background-image: url(./img/bg3.jpg);
+}
+.div3 h1 {
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    border-radius: 36px 0 36px 0;
+    outline: 0.6rem inset purple;
+    outline-offset: .5rem;
+}
+
+.ds {
+    text-align: center;
+    padding: 3rem;
+}
+.ds h2 {
+    margin: 2rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.div4 {
+    background-image: url(./img/bg4.jpg);
+}
+.div4 h1 {
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    border-radius: 36px 0 36px 0;
+    outline: 0.6rem inset purple;
+    outline-offset: .5rem;
+}
+
+.why {
+    text-align: center;
+    padding: 3rem;
+}
+.why h2 {
+    margin: 2rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.div5 {
+    background-image: url(./img/bg1.jpg);
+}
+.div5 h1{
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    border-radius: 36px 0 36px 0;
+    outline: 0.6rem inset purple;
+    outline-offset: .5rem;
+}
+
+.div5 p {
+position: fixed;
+right: 1rem;
+bottom: 1rem;
+background-color: coral;
+padding: .6rem;
+border-radius: 40%;
+font-weight: 900;
+box-shadow: 3px 3px 2px grey;
+cursor: pointer;
+}
