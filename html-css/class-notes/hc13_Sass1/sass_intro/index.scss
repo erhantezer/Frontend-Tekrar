@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
 // //********************************************
@@ -19,3 +19,24 @@ $bannerBgColor: #cc6699;
 //********************************************
 //! Variable Usage
 //********************************************
+body {
+background-color: $bgColor;
+font-family: $fontFamily;
+color:$fontColor;
+font-size: $fontSize;
+}
+
+//*******  HEADER *********/
+header {
+background-color: $navBgColor;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+ img{
+    width: 80px;
+    border: $myBorder;
+    border-radius: 20px;
+    padding: 5px;
+ }
+}

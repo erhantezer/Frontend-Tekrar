@@ -1,5 +1,25 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header img {
+  width: 80px;
+  border: 2px solid rgb(175, 29, 29);
+  border-radius: 20px;
+  padding: 5px;
 }/*# sourceMappingURL=index.css.map */
