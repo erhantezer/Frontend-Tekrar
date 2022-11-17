@@ -45,8 +45,11 @@ padding: 1rem;
                 li {
                 //! içinde bulundğumuz elementi refere etmek için & işareti kullanılır.
                 display: inline-block;
+                padding-right: 0.8rem;
                 &:hover {
-                text-decoration:underline;
+                background-color: $bgColor;
+                padding: 0.4rem;
+                border-radius: 30%;
                         }
                     a {
                         color: $fontColor;
@@ -98,3 +101,79 @@ main {
 //*****************
 //! @MIXIN
 //*****************
+
+@mixin myBox($backgroundColor, $fontColors) {
+    background-color: $backgroundColor;
+    color: $fontColors;
+    width: 25%;
+    height: 15rem;
+    border: $myBorder;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 1rem;
+}
+
+.cards {
+    display: flex;
+    padding: 1rem;
+    .card1{
+        @include myBox(brown,white )
+    }
+    .card2 {
+        @include myBox(rgb(42, 165, 63), white);
+    }
+    .card3 {
+        @include myBox(rgb(165, 157, 42), black);
+    }
+    .card4 {
+        @include myBox(rgb(42, 46, 165), white);
+    }
+}
+
+//*******  ARTICLES *********/
+
+//*****************
+//! @EXTEND
+//*****************
+
+.articles {
+    display: flex;
+    padding: 1rem;
+    .article1{
+        width: 50%;
+        background-color: rgb(65, 105, 6);
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 10rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .article2{
+        @extend .article1;
+        background-color: chocolate;
+    }
+}
+
+//****** FOOTER *********
+
+//*************************
+//! FOR LOOP
+//*************************
+$textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
+
+.footer {
+    .socialIcons {
+        display: flex;
+        height: 8rem;
+        @for $i from 1 to 6 {
+            .social#{$i} {
+                width: 20%;
+                height: 100%;
+                background-color: lighten(rgba(205, 58, 58, 0.951), $i*8);
+                color: nth($textColor, -$i );
+                font-weight: $i*100;
+                font-size: $i * 1rem;
+            }
+        }
+    }
+}
