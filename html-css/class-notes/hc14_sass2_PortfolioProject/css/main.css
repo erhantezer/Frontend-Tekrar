@@ -4,4 +4,47 @@
   box-sizing: border-box;
 }
 
+.nav {
+  padding: 1rem;
+  height: 10vh;
+}
+.nav__list {
+  text-align: right;
+  list-style-type: none;
+}
+.nav__item {
+  display: inline;
+  padding: 1rem;
+}
+.nav__link {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.nav__link:hover {
+  font-weight: 600;
+  color: rgb(151, 61, 234);
+  text-shadow: 2px 2px 2px rgb(184, 16, 16);
+  transition: all 0.8s;
+}
+.nav__link--active {
+  color: #ff652f;
+}
+.nav__link--active:hover {
+  transition: all 0.4s;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  color: #eee;
+  background-color: #272727;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,40 @@
+//*****************************************************
+//*   NAV
+//*****************************************************
+
+//* Grandparent class (nav)
+
+.nav {
+    padding: 1rem;
+    height: 10vh;
+
+    &__list{
+        text-align: right;
+        list-style-type: none;
+    }
+    &__item{
+        display: inline;
+        padding: 1rem;
+    }
+    &__link{
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        &:hover{
+            font-weight: 600;
+            color: rgb(151, 61, 234);
+            text-shadow: 2px 2px 2px rgb(184, 16, 16);
+            @include transition(0.8s)
+        }
+
+        &--active{
+            color: $secondary-color;
+            &:hover{
+                @include transition(0.4s)
+            }
+        }
+
+
+    }
+}
