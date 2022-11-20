@@ -1,7 +1,29 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+link-style a, footer.horizontal a {
+  padding: 0.4rem;
+  transition: all 1s;
+  text-shadow: 2px 2px 5px rgb(111, 3, 3);
+}
+link-style a:hover, footer.horizontal a:hover {
+  color: #ff652f;
+}
+
+footer.horizontal {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+footer.horizontal .copyright {
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .nav {
@@ -44,11 +66,21 @@
 
 .home {
   height: 80vh;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+.home__name {
+  font-size: 4rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #fff;
+}
+.home__name--last {
+  color: red;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 body {

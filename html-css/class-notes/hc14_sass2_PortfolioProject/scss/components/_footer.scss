@@ -1,0 +1,30 @@
+//*****************************************************
+//*   FOOTER
+//*****************************************************
+
+link-style {
+    a{
+        padding: 0.4rem;
+        @include transition(1s);
+        text-shadow: 2px 2px 5px rgb(111, 3, 3);
+
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+}
+
+footer.horizontal {
+    // border: solid 2px red;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    @extend link-style;
+
+    .copyright {
+    font-weight: 700;
+    letter-spacing: 1px;
+    }
+}
