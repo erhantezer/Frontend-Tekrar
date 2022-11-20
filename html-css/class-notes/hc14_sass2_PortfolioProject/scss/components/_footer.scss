@@ -45,6 +45,8 @@ footer.vertical{
         @extend .link-style;
     }
     .copyright{
+
+        font-weight: 600;
         position: fixed;
         bottom: 1rem;
         right: 3rem;

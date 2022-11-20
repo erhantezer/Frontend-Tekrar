@@ -41,6 +41,7 @@ footer.vertical .social-icons {
   bottom: 1rem;
 }
 footer.vertical .copyright {
+  font-weight: 600;
   position: fixed;
   bottom: 1rem;
   right: 3rem;
