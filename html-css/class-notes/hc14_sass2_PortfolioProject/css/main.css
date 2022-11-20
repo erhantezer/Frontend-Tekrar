@@ -15,7 +15,6 @@
 }
 
 footer.horizontal {
-  border: solid 2px red;
   height: 10vh;
   display: flex;
   align-items: flex-end;
@@ -39,6 +38,7 @@ footer.vertical .social-icons {
   flex-direction: column;
   position: fixed;
   bottom: 1rem;
+  left: 0.5rem;
 }
 footer.vertical .copyright {
   font-weight: 600;
@@ -61,7 +61,6 @@ footer.middle {
 .nav {
   padding: 1rem;
   height: 10vh;
-  border: 1px solid red;
 }
 .nav__list {
   text-align: right;
@@ -137,7 +136,6 @@ footer.middle {
 
 .home {
   height: 80vh;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,6 +150,52 @@ footer.middle {
 .home__name--last {
   color: red;
   font-weight: 700;
+}
+
+.project-bgImg-container {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-bgImg-container .projects__bio-image {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.projects__items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 5rem;
+  gap: 1rem 0rem;
+}
+.projects__item {
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 5px solid #ff652f;
+  position: relative;
+}
+.projects__item img {
+  width: 100%;
+}
+.projects__item::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #ff652f;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.projects__item:hover::after {
+  opacity: 0.5;
 }
 
 body {
