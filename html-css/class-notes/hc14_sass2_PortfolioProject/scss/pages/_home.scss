@@ -1,0 +1,16 @@
+//*****************************************************
+//*   HOME PAGE
+//*****************************************************
+
+.home-bgImg-container {
+    @include bgImage(100vh,$main-bgImage-path)
+}
+
+.home {
+    height: 80vh;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
