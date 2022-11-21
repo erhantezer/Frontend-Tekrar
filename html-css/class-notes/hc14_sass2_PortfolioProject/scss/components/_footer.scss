@@ -67,4 +67,11 @@ footer.middle {
     padding: 1rem;
     gap: 1rem;
     @extend .link-style;
+
+    i {
+        @include transition(2s);
+    }
+    i:hover {
+        transform: rotateY(360deg);
+    }
 }
