@@ -15,9 +15,14 @@
     color:white;
 } */
 .navbar .nav-link:hover {
-    color: var(--red);
-    
+    color: var(--red);    
 }
+
+/* .navbar img {
+ border:1px solid red; 
+width:275px;
+margin-left:1rem; 
+} */
 
 /*! ---------------------- 2- CAROUSEL ----------------------------- */
 
