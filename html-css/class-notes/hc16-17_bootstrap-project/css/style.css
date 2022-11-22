@@ -78,3 +78,41 @@ section#courses .nav-link {
 section#courses .nav-item .nav-link.active {
     background-color: var(--red);
   }
+
+/*! ------------------- 6- CONTACT SECTION ------------------------ */
+section#contact i {
+    color: var(--red);
+    font-size: 2rem;
+}
+
+
+/*! -------------------- 7- FOOTER ------------------------ */
+footer i {
+    font-size: 2rem;
+    color: white;
+    margin-right: 1rem;
+    transition: color 1s;
+  }
+  
+  footer i:hover {
+    color: var(--red);
+  }
+
+/** ------------------- UP-BUTTON --------------------- */
+.up-btn {
+color:white;
+position:fixed;
+bottom:1rem;
+right:1rem;
+font-size:1.2rem;
+background:var(--red);
+padding:0.6rem;
+border-radius:50%;
+text-align:center;
+height:50px;
+width:50px;
+}
+
+.up-btn:hover {
+    color: black;
+}
