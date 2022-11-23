@@ -79,3 +79,69 @@
 
 //? console.log('----------\nswitch case statements\n----------');
 
+// let text;
+// let fruit = prompt('what type your favorite fruit example:banana, orange, apple...');
+// banana, lime, limon, orange, apple, default 
+
+// switch (fruit.toLocaleLowerCase()) {
+//     case "banana":
+//         text ="I like banana 🍌"
+//         break;
+//     case "watermelon 🍉":
+//         text ="I like watermelon"
+//         break;
+//     case "apple 🍎":
+//         text ="I like banana"
+//         break;
+//     case "chery 🍒":
+//         text ="I like banana"
+//         break;
+//     case 'lime 🍋🍈🥭':
+//     case 'lemon':
+//     case 'orange':
+//         text = `I am not a fan of ${fruit}`;
+//         break;
+
+//     default:
+//         text = "I don't know that fruit 🥞";
+// }
+// console.log(text);
+
+
+// ! example-5  cw weekly program ❗your turn 🧑‍💻
+// pazartesi salı çarşamba perşembe in class
+// cuma team work
+// cumartesi inclass + workshop
+// pazar self study
+// default yanlış gün girildi.
+
+// const day= prompt("Bir gün giriniz example:monday").toLocaleLowerCase();
+
+// switch (day) {
+//     case "monday":
+//     case "tuesday":
+//     case "wednesday":
+//     case "thursday":
+//         console.log("inclass")
+//         break;
+//     case "friday":
+//         console.log("teamwork");
+//         break;
+//     case "saturday":
+//         console.log("inclass + workshop");
+//         break;
+//     case "sunday":
+//         console.log("self study");
+//         break;
+//     default:
+//         console.log("yanlış gün giirdiniz")
+// }
+
+
+//!leap year
+// let year = +prompt("Enter a year")
+// if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+//     console.log(`${year} are leap years`);
+// }else {
+//     console.log(`${year} aren't leap years`)
+// }
