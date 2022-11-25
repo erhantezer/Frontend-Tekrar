@@ -91,7 +91,7 @@ console.log(oku.replace(/AKILLI/i, 'Zeki'));
 
 
 //* ----------------------------------------------------------
-//*  slice(beginIndex[, endIndex])
+//*  slice(beginIndex[, endIndex]) dilim
 //*  substring(beginIndex[, endIndex])
 //*  substr (depreceated)
 //* ----------------------------------------------------------
@@ -101,3 +101,10 @@ console.log(veysel.slice(33), typeof veysel);//gündüz gece string
 console.log(veysel.slice(17, 30)); // dayım yürüyor
 console.log(veysel.slice(-10));//düz gece..
 console.log(veysel.slice(-27, -19));//yım yürü
+//! negatif indeks substring ile kullanılamaz.
+console.log(veysel.substring(17, 30)); // dayım yürüyor.
+
+//* ----------------------------------------------------------
+//* split([sep [, limit] ]) bölmek ayırmak
+//* ----------------------------------------------------------
+const tarkan = 'Gel gündüzle gece olalım';
