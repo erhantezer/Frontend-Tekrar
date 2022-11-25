@@ -47,3 +47,57 @@ console.log(s3.charAt()); //! 0.indexste bulunan char'ı getirir
 console.log(s3.charAt(4)); //! o
 console.log(s3.charAt(s3.length - 1)); //! d
 
+//* ----------------------------------------------------------
+//* includes() - case sentive
+//* ----------------------------------------------------------
+
+const  word = "To be or not to be, that is the question";
+
+console.log(word.includes("to be")); //!true
+console.log(word.includes("That")); //!false
+console.log(word.includes("")); //!true
+console.log(word.includes("to be",14)); //!false
+console.log(word.includes("to be",13)); //!true
+console.log(word.includes(" ")); //!true
+
+//* ----------------------------------------------------------
+//* indexOf() , lastIndexOf() - case sensitive
+//* ----------------------------------------------------------
+const tobeIndex = word.indexOf("or");
+
+console.log(tobeIndex); //! 6
+console.log(word.indexOf('be')); //!3
+console.log(word.lastIndexOf('be')); //!16
+console.log(word.lastIndexOf('BE')); //!-1 olmayınca eksi 1 döndürür
+
+//* ----------------------------------------------------------
+//* startsWidth() , endsWith() - case sensitive
+//* ----------------------------------------------------------
+const word2 = 'Salına salına sinsice !';
+console.log(word2.startsWith('sa')); //!false
+console.log(word2.startsWith('sa', 7)); //! true
+console.log(word2.endsWith('!')); //! true
+
+//* ----------------------------------------------------------
+//*  replace(searchFor, replaceWith) --immutable
+//* ----------------------------------------------------------
+let oku = "Oku Baban gibi, saf olma";
+console.log(oku.replace("saf olma", "akıllı ol"));
+oku = oku.replace('saf olma', 'akilli ol');
+console.log(oku);
+
+//* Detaylı değiştirme alternatifleri için regex kullanılabilir.
+console.log(oku.replace(/AKILLI/i, 'Zeki'));
+
+
+//* ----------------------------------------------------------
+//*  slice(beginIndex[, endIndex])
+//*  substring(beginIndex[, endIndex])
+//*  substr (depreceated)
+//* ----------------------------------------------------------
+const veysel = 'Uzun ince bir yoldayım yürüyorum gündüz gece..';
+
+console.log(veysel.slice(33), typeof veysel);//gündüz gece string
+console.log(veysel.slice(17, 30)); // dayım yürüyor
+console.log(veysel.slice(-10));//düz gece..
+console.log(veysel.slice(-27, -19));//yım yürü
