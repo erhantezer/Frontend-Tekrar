@@ -119,3 +119,7 @@ console.log(copyTarkan); //* String'i array haline getirdi. (Tek elemanlı)
 const copy = tarkan.split(""); //! herbir harfi ve boşluğu eleman olarak tek tek yazar
 console.log(copy);//! ['G', 'e', 'l', ' ', 'g', 'ü', 'n', 'd', 'ü', 'z', 'l', 'e', ' ', 'g', 'e', 'c', 'e', ' ', 'o', 'l', 'a', 'l', 'ı', 'm']
 
+//* ÖDEV
+//* ----------------------------------------------------------
+// https://www.youtube.com/watch?v=b7vfp5G4brE
+// https://youtu.be/b7vfp5G4brE
