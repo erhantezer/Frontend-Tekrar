@@ -129,3 +129,12 @@ const splitedLink = youtube.split("=");
 console.log(splitedLink);
 const shortLink = `https://youtu.be/${splitedLink[1]}`;
 console.log(shortLink)
+
+//* ----------------------------------------------------------
+//* trim();
+//* ----------------------------------------------------------
+const ramazan = '    Hoş geldin ya şehri Ramazan     ';
+console.log(ramazan);
+console.log(ramazan.length); // 36
+console.log(ramazan.trim());
+console.log(ramazan.trim().length); //27
