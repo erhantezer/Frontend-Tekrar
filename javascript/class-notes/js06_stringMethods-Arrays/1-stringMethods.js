@@ -108,3 +108,14 @@ console.log(veysel.substring(17, 30)); // dayım yürüyor.
 //* split([sep [, limit] ]) bölmek ayırmak
 //* ----------------------------------------------------------
 const tarkan = 'Gel gündüzle gece olalım';
+const splited = tarkan.split(" "); //! Boşluklara göre ayırdı Array' çevirdi
+console.log(splited, typeof splited); //! ['Gel', 'gündüzle', 'gece', 'olalım'] 'object'
+const gece = splited[2]; //* indisleme ile değer okunabilir.
+console.log(gece);
+
+const copyTarkan = tarkan.split();
+console.log(copyTarkan); //* String'i array haline getirdi. (Tek elemanlı)
+
+const copy = tarkan.split(""); //! herbir harfi ve boşluğu eleman olarak tek tek yazar
+console.log(copy);//! ['G', 'e', 'l', ' ', 'g', 'ü', 'n', 'd', 'ü', 'z', 'l', 'e', ' ', 'g', 'e', 'c', 'e', ' ', 'o', 'l', 'a', 'l', 'ı', 'm']
+
