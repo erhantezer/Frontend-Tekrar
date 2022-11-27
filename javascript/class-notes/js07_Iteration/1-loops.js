@@ -56,8 +56,8 @@ const ogrenciBul = function (isim) {
     return sayac === 0 ? `${isim} bulunamadı`: `${isim}, ${sayac} adet bulundu`
 }
 
-// let ogrIsim = prompt("Ogrenci adini giriniz: ").toLocaleLowerCase();
-// console.log(ogrenciBul(ogrIsim));
+let ogrIsim = prompt("Ogrenci adini giriniz: ").toLocaleLowerCase();
+console.log(ogrenciBul(ogrIsim));
 
 
 //* ======================================================
@@ -84,5 +84,5 @@ const ogrenciBulForOf = function (isim) {
     }
 };
 
-// let ogrName = prompt('Ogrenci adini giriniz:').toLocaleLowerCase();
-// console.log(ogrenciBulForOf(ogrName));
+let ogrName = prompt('Ogrenci adini giriniz:').toLocaleLowerCase();
+console.log(ogrenciBulForOf(ogrName));
