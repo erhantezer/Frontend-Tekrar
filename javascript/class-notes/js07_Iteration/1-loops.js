@@ -68,6 +68,7 @@ const ogrenciBul = function (isim) {
 //* kapsayacak sekilde guncellenmis halidir. Bu dongude dizi
 //* icersindeki veriye erisirken indisleme kullanmaya gerek yoktur.
 
+
 const ogrenciBulForOf = function (isim) {
     let sayac = 0;
     for (let ogrenci of ogrenciler) {
