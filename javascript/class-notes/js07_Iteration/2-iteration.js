@@ -9,11 +9,26 @@ console.log('****** ITERATION **********');
 
 const fiyatlar = [100, 250, 50, 89];
 
-fiyatlar.forEach((x) => console.log(x));
 
-// function yazdir(value) {
-//     console.log(value)
-// }
-// fiyatlar.forEach(yazdir)
+function yazdir(value) {
+    console.log(value)
+}
+fiyatlar.forEach(yazdir)
 
 console.log('***************************');
+
+//! Arraw function kullanılarak çözüm
+fiyatlar.forEach((x) => console.log(x));
+
+
+//** Fiyatlar dizisindekilerin toplamini konsola yazdiriniz */
+let toplam = 0;
+fiyatlar.forEach((k) => toplam += k );
+
+console.log("Toplam:",toplam);
+
+//! NOT: forEach metodu void bir metottur.
+//! (Yani herhangi bir değer döndürmez.)
+console.log(fiyatlar.forEach((fiyat) => (toplam += fiyat))); //!undefined
+
+//*-------------- ÖRNEK -------------------
