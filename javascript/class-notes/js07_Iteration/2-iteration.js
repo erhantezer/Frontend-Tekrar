@@ -88,5 +88,63 @@ console.log(isimler);
 //! Tüm isimleri büyük harfe çevirip konsolda yazdiriniz.
 isimler.map((isim) => isim.toLocaleUpperCase()).forEach((ad) =>console.log(ad))
 
-/* map() metodundan sonra eğer forEach gibi bir terminal(consumer) işlemi
+//* map() metodundan sonra eğer forEach gibi bir terminal(consumer) işlemi
 //* kullanılırsa yazılan ifade bir dizi döndürmemiş olur.
+
+
+//* ======================================================
+//*                       FILTER METHOD
+//* ======================================================
+
+const isimlerrr = [
+    'Ahmet',
+    'mehmet',
+    'ismet',
+    'SAFFET',
+    'Can',
+    'Canan',
+    'Cavidan',
+];
+
+isimlerrr.filter((isim) => isim === "Ahmet")
+.map((ad) => ad.toLocaleUpperCase())
+.forEach((isim) =>console.log(`İSİM: ${isim}`));
+
+//* fiyatlar array'inde fiyatı 250 TL den az olanlari ayri bir diziye saklayalim.
+const fiyatlarrr = [100, 250, 50, 89];
+
+const filter250 = fiyatlarrr.filter((fiyat) => fiyat < 250)
+console.log(filter250);
+
+
+//*-------------- ÖDEV -------------------
+const fiyatlarr = [100, 250, 50, 89];
+
+//* 1) fiyatlarr dizisindeki fiyatı 90'dan büyük olan değerleri konsola tek tek bastırınız.
+fiyatlarr.filter((fiyat) => fiyat > 90).forEach((yaz) => console.log(yaz));
+
+console.log("***************************")
+//* 2) fiyatlarr dizisindeki fiyatı 110'dan küçük olan değerlere %10 artış yapın ve bu değerleri konsola tek tek bastırınız.
+fiyatlarr
+.filter((fiyat) => fiyat < 110)
+.map((artıs) => artıs*1.1)
+.forEach((yazdir) => console.log(Math.round(yazdir)));
+
+console.log("***************************")
+
+//* 3) maaslar 4000'den düsük olanlara %50 zam yapmak istiyoruz ve bunu ayri dizi olarak saklamak istiyoruz.
+const maaslar = [3000, 5000, 4000, 6000, 6500];
+
+const dusuk4000 = maaslar.filter((maas) => maas < 4000).map((zam) => zam*1.5);
+console.log(dusuk4000);
+
+console.log("***************************");
+
+//* 4) Maasi 4000 'den büyük olanlara %25 zam yaparak sonuçlari yazdiralim.
+
+maaslar.filter((maas) => maas > 4000).forEach((yaz) => console.log(`Zamlı : ${yaz*1.25}`))
+
+
+//* ======================================================
+//*                       REDUCE METHOD
+//* ======================================================
