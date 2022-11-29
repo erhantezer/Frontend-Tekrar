@@ -51,7 +51,7 @@ console.log(fiyatlarx);
 //* ======================================================
 //*                       MAP METHOD
 //* ======================================================
-
+//! map array haline getirir return yapısı içerir
 //*-------------- ÖRNEK -------------------
 //* isimler dizisin içerisindeki her ismi büyük harf olarak
 //* yeni bir diziye saklayalım.
@@ -79,3 +79,14 @@ const buyukIsimler = isimler.map((isim, indis, dizi) => {
 })
 console.log(buyukIsimler);
 console.log(isimler);
+
+
+//* ======================================================
+//*                CHAINING (PIPELINE)
+//* ======================================================
+
+//! Tüm isimleri büyük harfe çevirip konsolda yazdiriniz.
+isimler.map((isim) => isim.toLocaleUpperCase()).forEach((ad) =>console.log(ad))
+
+/* map() metodundan sonra eğer forEach gibi bir terminal(consumer) işlemi
+//* kullanılırsa yazılan ifade bir dizi döndürmemiş olur.
