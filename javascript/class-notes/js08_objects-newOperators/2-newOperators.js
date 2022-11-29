@@ -41,3 +41,43 @@ console.log(name2, model2, engine2);
 
 
 
+const kisiler = [
+    {
+        name: 'Ahmet',
+        surname: 'Can',
+        job: 'developer',
+        age: 30,
+    },
+    {
+        name: 'Mehmet',
+        surname: 'Baki',
+        job: 'tester',
+        age: 35,
+    },
+    {
+        name: 'Ruzgar',
+        surname: 'Kuzey',
+        job: 'tester',
+        age: 24,
+    },
+];
+
+kisiler.forEach((kisi) => {
+    console.log('*********************');
+    console.log('NAME:', kisi.name);
+    console.log('SURNAME:', kisi.surname);
+    console.log('JOB:', kisi.job);
+    console.log('AGE:', kisi['age']);
+});
+
+kisiler.forEach((kisi) => {
+    console.log('*********************');
+    const { name, job, surname, age } = kisi; //?DESTRUCTURING
+    console.log('NAME:', name);
+    console.log('SURNAME:', surname);
+    console.log('JOB:', job);
+    console.log('AGE:', age);
+});
+
+
+
