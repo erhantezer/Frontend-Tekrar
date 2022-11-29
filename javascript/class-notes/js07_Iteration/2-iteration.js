@@ -148,3 +148,11 @@ maaslar.filter((maas) => maas > 4000).forEach((yaz) => console.log(`Zamlı : ${y
 //* ======================================================
 //*                       REDUCE METHOD
 //* ======================================================
+
+//* 5) maas toplamini bulunuz.
+const toplamMaas = maaslar.reduce((t,m) => t + m, 0)
+console.log(`Toplam maaş: ${toplamMaas}`)
+
+//* 6) maasi ortalamanin altinda olanlara %20 zam yapalim.
+const zamlı = maaslar.filter((maas) => maas < toplamMaas/maaslar.length).map((zam) => zam*1.2);
+console.log(zamlı)
