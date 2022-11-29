@@ -17,7 +17,7 @@ fiyatlar.forEach(yazdir)
 
 console.log('***************************');
 
-//! Arraw function kullanılarak çözüm
+//! Arrow function kullanılarak çözüm
 fiyatlar.forEach((x) => console.log(x));
 
 
