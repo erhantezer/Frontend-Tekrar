@@ -85,9 +85,24 @@ console.log(isci, calisan)
 const kisi = {
     ad: "Can",
     soyad: "Canan",
+    dogum: 1990,
     meslek: "developer",
     ehliyet: true,
     yasHesapla: function () {
-        return
-    }
-}
+        return new Date().getFullYear() - this.dogum
+    },
+    ozet: function () {
+        return `${this.ad}, ${this.yasHesapla()} yasindadir`;
+    },
+    // ozet: () => {
+    //   console.log(this);
+    //   return `${this.ad}, ${this.yasHesapla()} yasindadir`;
+    // },
+};
+
+console.log(this);
+
+console.log("Yas:", kisi.yasHesapla());
+console.log("Bilgi:", kisi.ozet());
+
+console.log('BILGI:', this.ozet()); //! TypeError: this.ozet is not a function
