@@ -79,5 +79,54 @@ kisiler.forEach((kisi) => {
     console.log('AGE:', age);
 });
 
+//* function
+function getInfo() {
+    return {
+        id:99,
+        nameee: "Apple",
+        price:20000,
+    }
+};
+
+const {id, nameee, price} = getInfo(); //? DESTRUCTURING
+console.log(id, nameee, price);
 
 
+//* ======================================================
+//*    NEW GENERATION OPERATORS: DESTRUCTURING (ARRAY)
+//* ======================================================
+
+const names = ['Ahmet', 'Mehmet', 'İsmet', 'Saffet'];
+
+/* Classical method*/
+const name10 = names[0]; //Ahmet
+const name20 = names[1]; //Mehmet
+
+const [person1, person2, , person4] = names;
+console.log(person1, person2, person4);
+
+
+//*======================================================
+//*   NEW GENERATION OPERATORS: SPREAD OR REST (...)
+//* ======================================================
+
+//* REST: (Arrays) */ geri kalanı yazma
+const vehicles = ['bmw', 'reno', 'mercedes', 'ferrari', 'anadol'];
+
+const [vec1, vec2, ...restVehicles] = vehicles;
+
+console.log(vec1, vec2);
+console.log(restVehicles);
+
+//* REST (Objects) geri kalanı yazma
+const personel = {
+    pName: 'john',
+    surname: 'smith',
+    job: 'developer',
+    age: 30,
+};
+
+const { pName, job, ...surnameAge } = personel;
+console.log(pName, job, surnameAge);
+
+//* REST (Function Arguments) geri kalanı yazma
