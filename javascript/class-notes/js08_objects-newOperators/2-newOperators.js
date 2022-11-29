@@ -130,3 +130,47 @@ const { pName, job, ...surnameAge } = personel;
 console.log(pName, job, surnameAge);
 
 //* REST (Function Arguments) geri kalanı yazma
+const topla = (x, y) => {
+    return x+y;
+};
+
+//? hata vermez fakat sadece 2 argümanı toplar
+console.log(topla(1, 2, 3, 4, 5, 6));
+
+const hepsiniTopla = (...sayilar) => {
+    let toplam=0;
+    console.log(sayilar);  //? [1, 2, 3, 4, 5, 6]
+    sayilar.forEach((sayi) => toplam += sayi);
+    return toplam;
+}
+
+console.log(hepsiniTopla(1, 2, 3, 4, 5, 6));
+
+
+//? ------------------------------------------------------
+//?  SPREAD (açma)
+//? ------------------------------------------------------
+
+const araclar = ['Ucak', 'Helikopter', 'Bisiklet'];
+const otomobiller = ['Tır', 'Otobus', 'Araba', 'SUV'];
+
+const tumAraclar = [...araclar, ...otomobiller];
+console.log(tumAraclar);
+
+//* Example
+const meyveler = ['cherry', 'pear', 'apricot', 'raisin'];
+const turunclar = ['mandalin', ...meyveler, 'lime', 'orange'];
+console.log(turunclar);
+
+//* Ornek (String spread) AÇMA İŞLEMİ
+let str = "Hello FS";
+console.log([...str]) //! ['H', 'e', 'l', 'l', 'o', ' ', 'F', 'S']
+console.log(...str) //! H e l l o   F S
+console.log(Array.from(str)); //! ['H', 'e', 'l', 'l', 'o', ' ', 'F', 'S']
+
+//* Ornek (max)
+console.log(Math.max(1, 3, 9, 5));
+
+const rakamlar = [1, 3, 9, 5];
+console.log(...rakamlar);
+console.log('MAX:', Math.max(...rakamlar));
