@@ -32,3 +32,18 @@ console.log("Toplam:",toplam);
 console.log(fiyatlar.forEach((fiyat) => (toplam += fiyat))); //!undefined
 
 //*-------------- ÖRNEK -------------------
+let toplam1 = 0;
+fiyatlar.forEach((deger, indis, dizi) => {
+    toplam1 +=deger;
+    console.log(`${indis}. iterasyon toplami: ${toplam1}`);
+    dizi[indis] = deger + 10
+})
+console.log(fiyatlar);
+
+//*-------------- ÖDEV -------------------
+//* fiyatlar dizisinde her bir fiyata %10 zam yapalım.
+const fiyatlarx = [100, 250, 50, 89];
+fiyatlarx.forEach((fiyat, indis, dizi) => {
+    dizi[indis] = Math.round(fiyat * 1.1);
+})
+console.log(fiyatlarx)
