@@ -26,3 +26,41 @@ header.onmouseout = () => {
 
 //? METHOD-4 (ONLY JAVASCRIPT - addEventListener())
 //?-------------------------------------------------------
+
+const myImg = document.querySelector("img");
+
+// myImg.addEventListener("mouseover", () =>{
+//     myImg.style.transform="translateY(5px)"
+// })
+
+// myImg.addEventListener("mouseout", () =>{
+//     myImg.style.transform="translateY(-5px)"
+// })
+
+myImg.addEventListener('mouseover', () => {
+    myImg.style.transform = 'scale(1.2, 1.4)';
+});
+
+myImg.addEventListener('mouseout', () => {
+    myImg.style.transform = 'scale(1)';
+});
+
+//* -------------------------------------------------
+//* EXAMPLE-2 (Button onclick)
+//* -------------------------------------------------
+const buton = document.querySelector("#btn");
+
+let a = true
+buton.addEventListener("click", function() {
+    if(a){
+        document.querySelector("body").style.backgroundImage = 
+        "linear-gradient(to right, purple, yellow)";
+        buton.innerText = "Search";
+        a=false
+    }else {
+        document.querySelector("body").style.background= "white";
+        buton.innerText = "click";
+        a=true
+    }
+
+});
