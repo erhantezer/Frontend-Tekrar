@@ -52,4 +52,11 @@ img[0].style.transform = 'rotate(-4deg)';
 
 //* EXAMPLE-4
 //* ---------------
+const par = document.getElementsByClassName("par");
+console.log(par); //! HTMLCollection(2) [p.par, p.par]
+// par[0].textContent = "DOM MANÜPİLASYONU";
+// par[0].innerText = "DOM DOM DOM";
+// par[0].innerHTML = `DOMMMM <img src="" alt="deneme" />`;
+par[0].innerHTML += ' <a href="https://www.clarusway.com">Clarusway</a>';
+
 
