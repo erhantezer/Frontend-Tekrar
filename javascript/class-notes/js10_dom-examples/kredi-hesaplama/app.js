@@ -8,7 +8,7 @@ const sonuclar = document.querySelector(".sonuclar");
 console.log(hesaplaBtn);
 
 let oran = 0;
-let taksit =0;
+let taksit = 0;
 
 hesaplaBtn.addEventListener("click", (e) => {
     //? preventDefault() event'ın default davranışı (submit etmek ve formu silmek) engeller.
