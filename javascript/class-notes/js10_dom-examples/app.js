@@ -35,9 +35,10 @@ ekleBtn.addEventListener("click", (e) => {
     if(!dilInput.value){
         alert("Please Enter a Value")
     } else {
-        ul.innerHTML = `<li>${dilInput.value}</li>`;
-        dilInput.value = "";
+        ul.innerHTML += `<li>${dilInput.value}</li>`;
     }
+    javaScript()
+    dilInput.value = "";
     
 });
 
@@ -52,4 +53,35 @@ silBtn.addEventListener("click", () => {
     // } else {
     //     ul.removeChild(ul.lastElementChild)
     // }
-})
+});
+
+const javaScript = () => {
+    document.querySelectorAll("ul li").forEach((dil) => {
+        const kucukHarf = dil.textContent.toLowerCase();
+        if(kucukHarf === "javascript") {
+            // dil.className = "red";
+
+            //?Alternatif yöntem
+            dil.setAttribute('class', 'red');
+        }
+    });
+    
+};
+
+dilInput.addEventListener("keydown", (e) => {
+    // console.log(e.target.value)
+    if(e.keyCode === 13) {
+        ekleBtn.click();
+    }
+    //  if (e.code === 'Enter') {
+    //  ekleBtn.onclick();
+    //  }
+    if (e.code === 'Delete') {
+        silBtn.click();
+    }
+});
+
+window.onload = () => {
+    javaScript();
+    dilInput.focus();
+}
