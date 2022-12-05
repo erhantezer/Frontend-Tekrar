@@ -27,6 +27,15 @@ btn.addEventListener("click", (e) => {
         </li>`;
     }
     todoInput.value = "";
+    
 })
 
 //! Klavyeden enter tusuna basilmasi ile add butonunun click fonksiyonunun cagrilmasi
+todoInput.onkeydown = function (e) {
+    if(e.key ==="Enter") {
+        btn.click()
+    }
+    // console.log(e)
+}
+
+//! delete ve ok butonları için event tanimlamasi
