@@ -16,3 +16,14 @@ window.addEventListener("load", () =>{
 })
 
 //! Add Buton Event'inin tanimanmasi
+btn.addEventListener("click", (e) => {
+    if(!todoInput.value) {
+        alert("Please Enter TO-DO")
+    }else {
+        todoUl.innerHTML += `  <li>
+        <i class="fa fa-check"></i>
+        <p>${todoInput.value}</p>
+        <i class="fa fa-trash"></i>
+      </li>`;
+    }
+})
