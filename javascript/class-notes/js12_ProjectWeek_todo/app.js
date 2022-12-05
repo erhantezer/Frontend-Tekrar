@@ -24,6 +24,9 @@ btn.addEventListener("click", (e) => {
         <i class="fa fa-check"></i>
         <p>${todoInput.value}</p>
         <i class="fa fa-trash"></i>
-      </li>`;
+        </li>`;
     }
+    todoInput.value = "";
 })
+
+//! Klavyeden enter tusuna basilmasi ile add butonunun click fonksiyonunun cagrilmasi
