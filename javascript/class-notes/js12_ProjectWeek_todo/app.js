@@ -39,3 +39,23 @@ todoInput.onkeydown = function (e) {
 }
 
 //! delete ve ok butonları için event tanimlamasi
+todoUl.addEventListener("click", (e) => {
+    //!Event, sil butonlarının birisinden geldi ise
+    if(e.target.classList.contains("fa-trash")) {
+        //! ilgili li elementini silerek DOM'u güncelle
+        e.target.parentElement.remove();
+        // e.target.closest("li").remove();
+    }
+
+    //! Event, check butonundan geldi ise
+    if(e.target.classList.contains("fa-check")){
+        if(e.target.parentElement.classList.contains("checked")){
+            e.target.parentElement.classList.remove("checked")
+        }else {
+            e.target.parentElement.classList.add("checked")
+        }
+    }
+    
+})
+
+
