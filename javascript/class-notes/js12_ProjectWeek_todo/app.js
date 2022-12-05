@@ -50,8 +50,10 @@ todoUl.addEventListener("click", (e) => {
     //! Event, check butonundan geldi ise
     if(e.target.classList.contains("fa-check")){
         if(e.target.parentElement.classList.contains("checked")){
+            //? ilgili li elementinde checked adinda bir class varsa bunu sil
             e.target.parentElement.classList.remove("checked")
         }else {
+            //? ilgili li elementinde checked adinda bir class yoksa ekle
             e.target.parentElement.classList.add("checked")
         }
     }
