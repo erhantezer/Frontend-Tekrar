@@ -27,6 +27,7 @@ body {
 }
 
 .display {
+    
     height: 15rem;
     width: 100%;
     text-align: right;
@@ -35,13 +36,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    
 }
+
 
 .previous-display {
     opacity: 0.5;
     font-size: 1.5rem;
     overflow: hidden;
 }
+
 
 .buttons-container {
     width: 100%;
