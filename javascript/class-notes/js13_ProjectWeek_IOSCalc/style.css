@@ -122,33 +122,34 @@ p{
     right: 1rem;
 }
 
-.moon{
+.moon {
     background-color: transparent;
-    width:20px;
+    width: 20px;
     height: 20px;
-    box-shadow: -6px 1px 0px  3px #275e8e;
-   
+    box-shadow: -6px 1px 0px 3px #275e8e;
     border-radius: 50%;
-    background-color:transparent;
+    background-color: transparent;
     transition: 2s;
-    border-left:4px solid blue
-  }
-  
-  .night_toogle{
+    border-left: 4px solid blue
+}
+
+.night_toogle {
     width: 33px;
     height: 33px;
     position: absolute;
-    left:22px;
-    top:20px;
-  }
-  .night_toogle:hover{
+    left: 22px;
+    top: 20px;
+}
+
+.night_toogle:hover {
     cursor: pointer;
-  
-  }
-  .sun{
+
+}
+
+.sun {
     background-color: #fdd462;
-    border-radius:50% ;
-    width:26px;
+    border-radius: 50%;
+    width: 26px;
     height: 26px;
     transition: 2s;
-  }
+}

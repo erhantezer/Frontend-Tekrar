@@ -147,7 +147,7 @@ const calculate = () => {
 function switchMode(){
     let moon=document.getElementById("moon");
     if(moon.className=="moon"){
-        moon.className="sun";
+        moon.classList="sun";
         document.body.style.backgroundColor="#141D26";
 
         document.body.style.color="#fff";
