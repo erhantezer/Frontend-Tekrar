@@ -25,9 +25,9 @@ const updateDom = (data) => {
 
     console.log(data)
 
-    data.map((user) => {
-        console.log(user);
-        //! destr
+    data?.map((user) => {
+        // console.log(user);
+        // //! destr
         const { login, avatar_url, html_url } = user;
         usersDiv.innerHTML += `
         <h2 class="text-primary mt-5">NAME:${login}</h2>
