@@ -10,6 +10,7 @@ let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 renderSavedTodos();
 
+//* kaydedilmiş ögelerin kayıp olmaması için ve sayfayı açtığımızda geçmişteki verilerin karşımıza gelmesi
 function renderSavedTodos() {
     todos.forEach((todo) => {
         createListElement(todo);
