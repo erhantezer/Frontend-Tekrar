@@ -1,3 +1,9 @@
 body{
     text-align: center;
 }
+.users {
+    display: grid;
+    grid-template-rows: repeat(8,1fr);
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
