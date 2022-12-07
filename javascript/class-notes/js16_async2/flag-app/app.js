@@ -18,14 +18,25 @@ const fetchCountry = async (name) => {
         console.log(error);
     }
 };
-;
 
 
 const inputDiv = document.querySelector('.input');
 const btnInp = document.querySelector('.btn');
 btnInp.addEventListener("click", (e) =>{
-    fetchCountry(inputDiv.value)
+    fetchCountry(inputDiv.value);
+    inputDiv.value=""
 })
+
+inputDiv.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") {
+        btnInp.click()
+    };
+});
+
+
+window.onload = () => {
+    inputDiv.focus()
+};
 
 const renderCountry = (country) => {
     console.log(country);
@@ -52,3 +63,5 @@ const renderCountry = (country) => {
     </div>
     `
 }
+
+
