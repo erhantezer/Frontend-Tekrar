@@ -22,3 +22,13 @@
 
 //! Private metotlara ise class disirasindan da eriselemez.
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebiler.
+
+class Book {
+
+    constructor(title, author, year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    
+    }
+}

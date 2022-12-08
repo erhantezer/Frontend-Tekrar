@@ -41,7 +41,7 @@ class Magazine extends Book {
     //! Overrided Metot (Parent class'daki bir metodun farkli
     //! fonksiyonellikle fakat ayni isimle tanimlanmasi)
     getSummary() {
-        return `${this.title} was written by ${this.author} in ${this.year} in ${this.month} `;
+        return `${this.title} was written by ${this.author} in ${this.year} in ${this.month}`;
     }
 
     //! Overloaded Metot (Ayni metodun farkli parametreler ile kullanilmasi)
@@ -49,11 +49,15 @@ class Magazine extends Book {
         this.price = (price * taxRate).toFixed(2);
     }
 
-    //!Override edilmis bir parent fonksiyonunu kullanmak icin super keyword'u kullanilabilr.
+    //!Overwrite edilmis bir parent fonksiyonunu kullanmak icin super keyword'u kullanilabilr.
     setPriceParent(price) {
         super.setPrice(price);
     }
 }
 
 const mag1 = new Magazine('Kasagi', 'Omer Seyfettin', 1940, 'Nov');
+console.log(mag1);
+console.log(mag1.getSummary());
+mag1.setPrice(100, 1.2);
+
 console.log(mag1);
