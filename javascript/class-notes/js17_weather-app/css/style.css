@@ -101,11 +101,11 @@ body {
     margin-left: 15px;
     border-radius: 5px;
     background: var(--red);
-    transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .top-banner form button:hover {
-    background: var(--darkred);
+    background-color: var(--darkred);
 }
 
 .top-banner form .msg {
