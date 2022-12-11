@@ -8,6 +8,7 @@
     --red: #ff1e42;
     --darkred: #c3112d;
     --orange: #ff8c00;
+    --ozel:#ffdd88
 }
 
 * {
@@ -50,7 +51,7 @@ ul {
 
 body {
     font: 1rem/1.3 "Roboto", sans-serif;
-    background: var(--bg_main);
+    background: var(--ozel);
     color: var(--text_dark);
     padding: 70px;
 }
@@ -66,7 +67,7 @@ body {
 /* SECTION #1
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .top-banner {
-    color: var(--text_light);
+    color: black;
 }
 
 .heading {
@@ -101,11 +102,12 @@ body {
     margin-left: 15px;
     border-radius: 5px;
     background: var(--red);
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .top-banner form button:hover {
     background-color: var(--darkred);
+    color: var(--text_light);
 }
 
 .top-banner form .msg {
@@ -186,7 +188,7 @@ body {
 .page-footer {
     text-align: right;
     font-size: 1rem;
-    color: var(--text_light);
+    color: darkblue;
     margin-top: 40px;
 }
 
