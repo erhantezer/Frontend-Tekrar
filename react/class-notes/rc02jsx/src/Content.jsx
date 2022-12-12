@@ -22,6 +22,9 @@ const Content = () => {
         display: 'block',
         width: '300px',
         margin: '1rem auto',
+        border:"2px solid red",
+        borderRadius:"50px"
+
     }
 
   return (
