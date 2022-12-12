@@ -13,7 +13,7 @@ const Person = ({props}) => {
         return(
             <div>
                 <Msg key={key} name={name} />
-                <p>{tel}</p>
+                <p>Tel: {tel}</p>
                 <img src={img} alt="" />
                 
                 <hr />
