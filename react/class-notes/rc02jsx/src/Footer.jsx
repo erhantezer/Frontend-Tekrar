@@ -1,5 +1,4 @@
 
-
 //? Componentler fonksiyonlarda oldugu gibi 3 farkli yontemle yazilabilir.
 //? JSX icerisinde degiskenler {} icerisinde gosterilir.
 //? rafce, rfce, rfc vb.
