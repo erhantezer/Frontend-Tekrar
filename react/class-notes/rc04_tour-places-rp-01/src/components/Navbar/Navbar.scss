@@ -1,0 +1,33 @@
+@import '../../scss/variables', '../../scss/mixins';
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $cardNavBgColor;
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 1rem;
+        
+        &:hover {
+            background-color: rgb(102, 132, 72);
+            color: $hoverColor;
+            font-weight:bold;
+        }
+    }
+}
+
+@include media-xsm{
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@include media-sm{
+    .navbar{
+        flex-direction: row;
+    }
+}
