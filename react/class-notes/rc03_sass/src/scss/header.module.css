@@ -1,0 +1,9 @@
+/* Color Theme Swatches in Hex */
+header {
+  background-color: #caafd0;
+  padding: 2rem;
+}
+header .title {
+  text-align: center;
+  color: azure;
+}/*# sourceMappingURL=header.module.css.map */
