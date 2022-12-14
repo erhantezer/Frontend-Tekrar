@@ -12,6 +12,7 @@ function App() {
         <Navbar/>
         <Header/>
         <Main/>
+        <p className="fs"><a href="#nav">E.T</a></p>
     </div>
   );
 }
