@@ -1,8 +1,10 @@
-// @import "../../scss/mixins", "../../scss/reset", "../../scss/variables";
+@import  "../../scss/variables";
 
 .header{
     text-align: center;
     font-size: 2rem;
     margin: 1rem;
     padding: 0.5rem;
+    font-weight: bolder;
+    color: $headerColor;
 }
