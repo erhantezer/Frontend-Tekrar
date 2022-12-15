@@ -16,20 +16,20 @@ const handleSubmit = (e) => {
   setEmail("");
   setName("");
   setPassword("");
-  
+
 }
 
   return (
     <div>
       <form onSubmit={handleSubmit} className="m-5">
       <div className="mb-3">
-          <label htmlFor="username" className="form-label">
-            Username <span className="text-danger"></span>
+          <label htmlFor="name" className="form-label">
+            Username <span className="text-danger">:{name}</span>
           </label>
           <input
             type="text"
             className="form-control"
-            id="username"
+            id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             />
@@ -39,7 +39,7 @@ const handleSubmit = (e) => {
           <label 
           htmlFor="email" 
           className="form-label">
-          Email address <span className="text-danger"></span>
+          Email address <span className="text-danger">:{email}</span>
           </label>
           <input 
           type="email" 
