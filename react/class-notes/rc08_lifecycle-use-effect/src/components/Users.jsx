@@ -36,7 +36,7 @@ const Users = () => {
                 {users.map((user) => {
                 const {id, name,email} =user
                     return (
-                        <div key={id} className="col bg-danger mb-4 text-white">
+                        <div key={id} className="col bg-danger mb-4 text-white p-4">
                             <img className="rounded-pill" src={`https://i.pravatar.cc/300?img=${id}`} alt="img" />
                             <h6 className="mt-2">{name}</h6>
                             <h6>{email}</h6>
