@@ -35,7 +35,6 @@ class LifeCycleMethods extends Component {
     }
 
 
-
     //! 3-) Bir component DOM agacina eklendiginde calistirilir.
     //! (İlk render sonrasi).
     //! Her yasam dongusu icin bir kere calisir.
