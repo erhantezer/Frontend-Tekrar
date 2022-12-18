@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class Timer extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -22,6 +23,8 @@ class Timer extends Component {
         console.log("Timer unmounted");
         clearInterval(this.intervalId);
     }
+
+    
     render() {
         const { time } = this.state;
         console.log(time);
