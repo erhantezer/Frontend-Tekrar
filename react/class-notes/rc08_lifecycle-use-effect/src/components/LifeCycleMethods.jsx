@@ -16,6 +16,7 @@
 //* (Optional)Bir componentin guncellenmesinin sonrasi (componentDidUpdate)
 //* Bir component'in DOM agacindan kaldirilmasi sonrasi(componentWillUnmount)
 
+
 import React, { Component } from 'react';
 
 class LifeCycleMethods extends Component {
@@ -52,6 +53,7 @@ class LifeCycleMethods extends Component {
     componentWillUnmount() {
         console.log("unmounting");
     }
+
 
     render() {
         //! 2-) Her bir render'da cagrilir
