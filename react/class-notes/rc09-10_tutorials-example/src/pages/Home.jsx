@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
+import AddTutorial from "../components/AddTutorial";
+import TutorialList from "../components/TutorialList";
 
 const Home = () => {
     const [tutorials, setTutorials] = useState();
@@ -22,7 +24,8 @@ const Home = () => {
     console.log(tutorials);
     return (
         <div>
-        
+            <AddTutorial/>
+            <TutorialList/>
         </div>
     )
 }
