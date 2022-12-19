@@ -5,7 +5,7 @@ const Home = () => {
     const [tutorials, setTutorials] = useState();
 
     const url = 'https://639f7c797aaf11ceb89ba52c.mockapi.io/tutorials';
-
+    //! get (read)
     const getTutorials = async () => {
         try {
             const {data} = await axios.get(url);
@@ -21,7 +21,9 @@ const Home = () => {
 
     console.log(tutorials);
     return (
-        <div>Home</div>
+        <div>
+        
+        </div>
     )
 }
 
