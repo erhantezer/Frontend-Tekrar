@@ -1,10 +1,22 @@
 
 
-const TutorialList = ({tutorials}) => {
-  const {id, title, description} = tutorials
-  return (
-    <div>TutorialList</div>
-  )
-}
+// const TutorialList = ({tutorials}) => {
+  
+//   return (
+    
+//     {tutorials?.map((item) => {
+//         const {id, title, description} = item
+//       return(
+//           <ul key={id}>
+//           <li>{id}</li>
+//           <li>{title}</li>
+//           <li>{description}</li>
+//         </ul>
+//       )
+//     })}
+      
+    
+//   )
+// }
 
-export default TutorialList
+// export default TutorialList
