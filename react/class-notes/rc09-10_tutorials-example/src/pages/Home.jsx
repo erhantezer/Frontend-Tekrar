@@ -23,8 +23,15 @@ const Home = () => {
         // toastSuccessNotify("veri çekildi")
     },[])
 
+    //! post
     const postAddTutorial =async (tutorial) => {
         await axios.post(url,tutorial);
+        getTutorials()
+    }
+
+    //! delete
+    const deleteTutorial =async (id) => {
+        await axios.delete(`${url}/${id}`)
         getTutorials()
     }
     console.log(tutorials)
@@ -32,7 +39,7 @@ const Home = () => {
     return (
         <div>
             <AddTutorial postAddTutorial={postAddTutorial}/>
-            <TutorialList tutorials={tutorials}/>
+            <TutorialList tutorials={tutorials} deleteTutorial={deleteTutorial}/>
         </div>
     )
 }
