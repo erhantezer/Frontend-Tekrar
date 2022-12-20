@@ -34,12 +34,20 @@ const Home = () => {
         await axios.delete(`${url}/${id}`)
         getTutorials()
     }
+
+    //! edit
+    const editTutorial =async (id) => {
+        await axios.put(`${url}/${id}`)
+    }
     console.log(tutorials)
 
     return (
         <div>
             <AddTutorial postAddTutorial={postAddTutorial}/>
-            <TutorialList tutorials={tutorials} deleteTutorial={deleteTutorial}/>
+            <TutorialList 
+            tutorials={tutorials} 
+            deleteTutorial={deleteTutorial} 
+            editTutorial={editTutorial}/>
         </div>
     )
 }
