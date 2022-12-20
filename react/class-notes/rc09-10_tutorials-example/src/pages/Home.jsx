@@ -1,28 +1,29 @@
+import TutorialList from "../components/TutorialList"
+import axios from "axios"
 import { useEffect, useState } from "react"
-import axios from "axios";
-import AddTutorial from "../components/AddTutorial";
-import TutorialList from "../components/TutorialList";
+// import { toastSuccessNotify } from "../helpers/ToastNotify"
+import AddTutorial from "../components/AddTutorial"
 
 const Home = () => {
-    const [tutorials, setTutorials] = useState();
+    const [tutorials, setTutorials] = useState()
+    const url = "https://63a16242a543280f7754aaa3.mockapi.io/tutorials";
 
-    const url ='https://63a0ee4824d74f9fe8448ea6.mockapi.io/tutorials';
-    //! get (read)
+
     const getTutorials = async () => {
         try {
-            const {data} = await axios.get(url);
-            setTutorials(data) 
-            console.log(data)
+            const {data} = await axios.get(url)
+            setTutorials(data)
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
     useEffect(() => {
         getTutorials()
+        // toastSuccessNotify("veri çekildi")
     },[])
+    console.log(tutorials)
 
-    console.log(tutorials);
     return (
         <div>
             <AddTutorial/>

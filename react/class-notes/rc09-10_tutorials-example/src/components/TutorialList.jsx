@@ -1,22 +1,52 @@
+import { FaEdit } from 'react-icons/fa';
+import { AiFillDelete } from 'react-icons/ai';
 
 
-// const TutorialList = ({tutorials}) => {
-  
-//   return (
-    
-//     {tutorials?.map((item) => {
-//         const {id, title, description} = item
-//       return(
-//           <ul key={id}>
-//           <li>{id}</li>
-//           <li>{title}</li>
-//           <li>{description}</li>
-//         </ul>
-//       )
-//     })}
-      
-    
-//   )
-// }
+const TutorialList = ({tutorials}) => {
 
-// export default TutorialList
+
+
+
+  return (
+    <div className='container mt-4'>
+        <table className='table table-striped'>
+            <thead>
+            <tr>
+                <th scope='col'>#id</th>
+                <th scope='col'>Title</th>
+                <th scope='col'>Description</th>
+                <th scope='col' className='text-center'>Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            {tutorials?.map((item) => {
+                const {id, title, description} = item
+                return (
+                    <tr key={id}>
+                        <th>{id}</th>
+                        <td>{title}</td>
+                        <td>{description}</td>
+                        <td className='text-center text-nowrap'>
+                            <FaEdit
+                                data-bs-toggle="modal"
+                                data-bs-target="#edit-modal"
+                                size={20}
+                                className="me-3 text-warning cursor-pointer"
+                            />
+                            <AiFillDelete
+                                size={20}
+                                className="text-danger cursor-pointer"
+                            />
+                        </td>
+                    </tr>
+                )
+            })}
+                
+            </tbody>
+        </table>
+
+    </div>
+  )
+}
+
+export default TutorialList
