@@ -2,8 +2,8 @@ import { useState } from "react"
 
 
 const AddTutorial = ({postAddTutorial}) => {
-  const [title, setTitle] = useState();
-  const [desc, setDesc] = useState()
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("")
 
 const handleSubmit = (e) => {
   e.preventDefault()
@@ -17,7 +17,7 @@ const handleSubmit = (e) => {
   return (
     <div className="container text-center mt-4">
       <h1>Add Your Tutorial</h1>
-      <form className="form-control" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
@@ -28,7 +28,8 @@ const handleSubmit = (e) => {
             className="form-control"
             placeholder="Enter Your Title"
             required
-            onClick={(e) => setTitle(e.target.value)}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -41,7 +42,8 @@ const handleSubmit = (e) => {
             id="desc"
             placeholder="Enter your Description"
             required
-            onClick={(e) => setDesc(e.target.value)}
+            value={desc}
+            onChange={(e) => setDesc(e.target.value)}
           />
         </div>
         <button className="btn btn-danger mb-4">Submit</button>
