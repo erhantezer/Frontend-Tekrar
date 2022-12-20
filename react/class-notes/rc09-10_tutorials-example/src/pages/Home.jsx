@@ -22,11 +22,16 @@ const Home = () => {
         getTutorials()
         // toastSuccessNotify("veri çekildi")
     },[])
+
+    const postAddTutorial =async (tutorial) => {
+        await axios.post(url,tutorial);
+        getTutorials()
+    }
     console.log(tutorials)
 
     return (
         <div>
-            <AddTutorial/>
+            <AddTutorial postAddTutorial={postAddTutorial}/>
             <TutorialList tutorials={tutorials}/>
         </div>
     )
