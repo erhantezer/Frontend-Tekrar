@@ -35,9 +35,9 @@ const Home = () => {
         getTutorials()
     }
 
-    //! edit
-    const editTutorial =async (id) => {
-        await axios.put(`${url}/${id}`)
+     //! Update (PUT:Whole Update,PATCH :Partially Update)
+    const editTutorial =async (id,title,desc) => {
+        await axios.put(`${url}/${id}`,{title, description:desc})
     }
     console.log(tutorials)
 
