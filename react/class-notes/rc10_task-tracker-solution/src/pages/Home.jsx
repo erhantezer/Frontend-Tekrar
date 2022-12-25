@@ -1,13 +1,15 @@
 import { useState } from "react"
 import Header from "../components/Header"
+import ShowTask from "../components/ShowTask"
 
 
 const Home = () => {
-  const [task, setTask] = useState()
+  const [tasks, setTasks] = useState()
 
   return (
     <div>
-      <Header />
+      <Header tasks={tasks} setTasks={setTasks}/>
+      <ShowTask/>
     </div>
   )
 }
