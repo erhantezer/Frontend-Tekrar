@@ -1,8 +1,14 @@
+import { useState } from "react"
+import Header from "../components/Header"
 
 
 const Home = () => {
+  const [task, setTask] = useState()
+
   return (
-    <div>Home</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 
