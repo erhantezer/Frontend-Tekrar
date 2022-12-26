@@ -39,7 +39,7 @@ const Header = ({ tasks, setTasks }) => {
 
     return (
         <header className="header">
-            <h1>TASK TRACKER</h1>
+            <h1 className='text-white font-semibold mb-2 text-2xl'>TASK TRACKER</h1>
             <button
                 onClick={handleShow}
                 className="btn"
