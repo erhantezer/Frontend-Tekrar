@@ -6,11 +6,17 @@ const Header = ({task, setTask}) => {
     name: 'SHOW ADD TASK BAR',
     bgColor: 'purple',
     })
+    const [show, setShow] =useState(false)
 
 
     const handleClick = () => {
-    
+        if(show){
+            setBtnStyle({name: 'SHOW ADD TASK BAR', bgColor: 'purple'})
+        }else{
+            setBtnStyle({name: 'CLOSE ADD TASK BAR', bgColor: 'red',})
+        }
     }
+    
     return (
     <header>
         <h1 className="text-blue-500 font-semibold">TASK TRACKER</h1>
