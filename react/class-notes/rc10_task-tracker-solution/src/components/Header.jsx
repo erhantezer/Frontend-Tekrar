@@ -1,13 +1,12 @@
-import { useState } from "react"
-import AddTaskForm from "./AddTaskForm"
-
+import AddTaskForm from './AddTaskForm';
+import { useState } from 'react';
 
 const Header = ({ tasks, setTasks }) => {
+    const [show, setShow] = useState(false);
     const [btnStyle, setBtnStyle] = useState({
         name: 'SHOW ADD TASK BAR',
         bgColor: 'purple',
-    })
-    const [show, setShow] = useState(false)
+    });
     //! başlangıç false olmalıkı ki bir defa tıklayalım
 
     //! React, default olarak state'leri hemen degistirmeyebilir.
@@ -22,29 +21,35 @@ const Header = ({ tasks, setTasks }) => {
     //* başlangıçta false olan değer tıklanınca handle click fonksiyonunu toplu şekilde değiştrir
     //* önce else çalışır setshow trular ardından tekrar tıklanınca show değeri true olduğu için
     //* if çalışır show değeri false lanır
-    const handleClick = () => {
+    const handleShow = () => {
         if (show) {
-            setBtnStyle({ name: 'SHOW ADD TASK BAR', bgColor: 'purple' })
+            setBtnStyle({
+                name: 'SHOW ADD TASK BAR',
+                bgColor: 'purple',
+            });
         } else {
-            setBtnStyle({ name: 'CLOSE ADD TASK BAR', bgColor: 'red', })
+            setBtnStyle({
+                name: 'CLOSE ADD TASK BAR',
+                bgColor: 'red',
+            });
         }
-        setShow(!show)
-    }
+        setShow(!show);
+    };
+    console.log(show);
 
     return (
-        <header>
-            <h1 className="text-blue-500 font-semibold">TASK TRACKER</h1>
+        <header className="header">
+            <h1>TASK TRACKER</h1>
             <button
-                className="btn text-white p-3 m-4 rounded-full"
-                onClick={handleClick}
+                onClick={handleShow}
+                className="btn"
                 style={{ backgroundColor: btnStyle.bgColor }}
             >
                 {btnStyle.name}
             </button>
-            {show && <AddTaskForm tasks={tasks} setTasks={setTasks}/>}
-            
+            {show && <AddTaskForm tasks={tasks} setTasks={setTasks} />}
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
