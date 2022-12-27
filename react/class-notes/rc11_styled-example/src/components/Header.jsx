@@ -4,7 +4,7 @@ import Button from "./styles/Button.styled"
 import Flex from "./styles/Flex.styled"
 
 const Header = () => {
-  return (
+    return (
     <StyledHeader>
         <Container>
             <Nav>
@@ -30,7 +30,7 @@ const Header = () => {
             </Flex>
         </Container>
     </StyledHeader>
-  )
+    )
 }
 
 export default Header

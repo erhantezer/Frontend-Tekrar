@@ -1,9 +1,10 @@
+import StyledCard from "./styles/Card.styled"
 import { Image } from "./styles/Header.styled"
 
 
 const Card = ({id, title, body, image}) => {
   return (
-    <div key={id}>
+    <StyledCard key={id} odd={id % 2 && 'row-reverse'}>
         <div>
           <h2>{title}</h2>
           <p>{body}</p>
@@ -11,7 +12,7 @@ const Card = ({id, title, body, image}) => {
         <div>
           <Image src={`./images/${image}`} width="500" alt="" />
         </div>
-    </div>
+    </StyledCard>
   )
 }
 
