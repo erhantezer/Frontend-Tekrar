@@ -1,21 +1,22 @@
 import Container from "./styles/Container.styled"
-import StyledHeader, { Logo } from "./styles/Header.styled"
+import StyledHeader, { Image, Logo, Nav } from "./styles/Header.styled"
 import Button from "./styles/Button.styled"
+import Flex from "./styles/Flex.styled"
 
 const Header = () => {
   return (
     <StyledHeader>
         <Container>
-            <nav>
+            <Nav>
                 <Logo src="./images/logo.png" alt="" />
                 <div>
                     <Button color="#A62440">Apply Courses</Button>
                     <Button bg="#A62440">Talk to Adviser</Button>
                 </div>
                 
-            </nav>
+            </Nav>
 
-            <div>
+            <Flex>
                 <div>
                     <h1>The IT Career of Your Dreams Starts Here!</h1>
                     <p>
@@ -23,10 +24,10 @@ const Header = () => {
                     micro class online with other trainees and learn coding skills
                     with a highly-skilled instructor.
                     </p>
-                    <button>Start Your New Carier</button>
+                    <Button bg="#A62440">Start Your New Carier</Button>
                 </div>
-                <img src="./images/hero.jpg" width="500" alt="" />
-            </div>
+                <Image src="./images/hero.jpg" alt="hero" />
+            </Flex>
         </Container>
     </StyledHeader>
   )

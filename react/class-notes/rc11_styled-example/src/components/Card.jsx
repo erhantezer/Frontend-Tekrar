@@ -1,3 +1,4 @@
+import { Image } from "./styles/Header.styled"
 
 
 const Card = ({id, title, body, image}) => {
@@ -8,7 +9,7 @@ const Card = ({id, title, body, image}) => {
           <p>{body}</p>
         </div>
         <div>
-          <img src={`./images/${image}`} width="500" alt="" />
+          <Image src={`./images/${image}`} width="500" alt="" />
         </div>
     </div>
   )
