@@ -1,0 +1,18 @@
+//! esch
+import styled from 'styled-components';
+
+const StyledHeader = styled.header`
+  background-color: ${(props) => props.theme.colors.header};
+  padding: 4rem 0;
+`;
+
+export const Logo = styled.img`
+    width: 300px;
+    padding: 2rem 0;
+    @media (max-width: ${({theme}) => theme.responsive}) {
+    
+        text-align: center;
+        }
+`
+
+export default StyledHeader;
