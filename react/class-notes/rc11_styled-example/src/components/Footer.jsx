@@ -1,14 +1,19 @@
+import SocialIcons from "./SocialIcons"
+import Container from "./styles/Container.styled"
+import Flex from "./styles/Flex.styled"
+import StyledFooter from "./styles/Footer.styled"
+import { Logo } from "./styles/Header.styled"
 
 
 const Footer = () => {
   return (
-    <footer>
-      <div>
-        <div>
-          <img src="./images/logo_white.png" width="500" alt="" />
-        </div>
+    <StyledFooter>
+      <Container>
+        <Flex>
+          <Logo src="./images/logo_white.png" width="500" alt="" />
+        </Flex>
 
-        <div>
+        <Flex>
           <ul>
             <li>1775 Tysons Blvd. 5th Floor. Tysons, VA 22102</li>
             <li> +1 (571) 360 66 77</li>
@@ -24,10 +29,10 @@ const Footer = () => {
             <li>Blog</li>
             <li>Contact Us</li>
           </ul>
-
-        </div>
-      </div>
-    </footer>
+          <SocialIcons/>
+        </Flex>
+      </Container>
+    </StyledFooter>
   )
 }
 
