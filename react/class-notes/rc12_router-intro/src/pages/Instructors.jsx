@@ -2,7 +2,7 @@ import React from 'react'
 
 const Instructors = () => {
   return (
-    <div>Instructors</div>
+    <div className='my-96 text-center'>Instructors</div>
   )
 }
 
