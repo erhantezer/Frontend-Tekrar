@@ -4,7 +4,7 @@ import courses from "../data"
 const Courses = () => {
     const navigate = useNavigate
     return (
-        <div className="container text-center mt-3 p-4">
+        <div className="container text-center mb-5 p-4">
             <h1>OUR COURSES</h1>
             <div className="row justify-content-center gap-4 aign-items-center mt-3">
                 {courses?.map((course) => {
@@ -16,7 +16,7 @@ const Courses = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{name}</h5>
                                     <p className="card-text">{text}</p>
-                                    <button onClick={() => navigate(`/${id}`, {state:course})} className="btn btn-danger">Detail</button>
+                                    <button onClick={() => navigate(`${id}`)} className="btn btn-danger">Detail</button>
                                 </div>
                             </div>
                         </div>

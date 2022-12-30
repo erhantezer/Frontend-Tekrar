@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Aws from "./pages/Aws";
 import Contact from "./pages/Contact";
+import CourseDetail from "./pages/CourseDetail";
 import FullStack from "./pages/FullStack";
 
 import Home from "./pages/Home";
@@ -33,6 +34,8 @@ function App() {
     <Nav/>
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path=":id" element={<CourseDetail/>}/>
+
           <Route path="instructors" element={<Instructors/>}/>
           <Route path="instructors/:id" element={<InstructorDetail/>}/>
 
