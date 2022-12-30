@@ -42,10 +42,10 @@ const InstructorDetail = () => {
         ) 
     }else {
     return (
-        <div className='container text-center p-4 '>
+        <div className='container text-center p-5'>
             <h3>{inst.name}</h3>
             <img 
-            className='w-50 border rounded-pill m-3'
+            className='w-25 border rounded-pill'
             src={`https://avatars.dicebear.com/v2/avataaars/${id}.svg`} 
             alt="" 
 

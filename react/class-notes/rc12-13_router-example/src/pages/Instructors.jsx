@@ -21,7 +21,7 @@ const Instructors = () => {
     getData()
   }, [])
   return (
-    <div className="container text-center mt-4">
+    <div className="container text-center mt-5">
       <h1>INSTRUCTOR LIST</h1>
       <div className="row justify-content-center g-4">
         {instructors?.map((inst) => {
@@ -37,7 +37,7 @@ const Instructors = () => {
           // onClick={() => navigate(`/instructors/${id}`, { state: inst })}
           >
             <img
-            className="border rounded-pill w-50" 
+            className="border rounded-pill w-25" 
               src={`https://avatars.dicebear.com/v2/avataaars/${id}.svg`}
               alt=""
             />

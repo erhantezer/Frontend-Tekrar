@@ -1,9 +1,21 @@
-import React from 'react'
+import errorImg from "../img/404.png"
+import { useNavigate } from 'react-router-dom'
 
 const NotFound = () => {
-  
+  const navigate = useNavigate();
+
   return (
-    <div>NotFound</div>
+    <div className='container text-center mt-3'>
+    <img className="w-75" src={errorImg} alt="" />
+    <div>
+      <button className="btn btn-success me-2" onClick={() => navigate("/")}>
+        Home
+      </button>
+      <button className="btn btn-warning" onClick={() => navigate(-1)}>
+        Go Back
+      </button>
+    </div>
+    </div>
   )
 }
 
