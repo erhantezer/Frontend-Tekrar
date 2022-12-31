@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <nav className="navbar navbar-expand-md bg-light">
             <div className="container-fluid ">
-                <Link className="navbar-brand" href="#">
+                <Link className="navbar-brand" to="/">
                     <img className="Img" src={logo} alt="" />
                 </Link>
                 <button
