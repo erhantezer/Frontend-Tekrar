@@ -8,7 +8,7 @@ import FullStack from "./pages/FullStack";
 import Home from "./pages/Home";
 import InstructorDetail from "./pages/InstructorDetail";
 import Instructors from "./pages/Instructors";
-import NotFound from "./pages/NotFound";
+// import NotFound from "./pages/NotFound";
 import Paths from "./pages/Paths";
 import PrivateRouter from "./pages/PrivateRouter";
 
