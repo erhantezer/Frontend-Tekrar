@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom"
 import './App.css';
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -10,6 +10,7 @@ import InstructorDetail from "./pages/InstructorDetail";
 import Instructors from "./pages/Instructors";
 import NotFound from "./pages/NotFound";
 import Paths from "./pages/Paths";
+import PrivateRouter from "./pages/PrivateRouter";
 
 //* İc ice sayfalari gsotermek icin Nested Route kullanilabilir.
 
@@ -32,20 +33,22 @@ function App() {
     <Nav/>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          {/* <Route path="/courses/:id" element={<CourseDetail/>}/> */}
-
           <Route path="instructors" element={<Instructors/>}/>
           <Route path="instructors/:id" element={<InstructorDetail/>}/>
 
-          {/* Nested Route /* içerisinde çağrılıyor */}
+    {/* Nested Route /* içerisinde çağrılıyor index açılır açılmaz gelmesi için */}
           <Route path="paths" element={<Paths/>}>
-          <Route index element={<FullStack/>}/>
-          <Route path="fullstack" element={<FullStack/>}/>
-          <Route path="aws" element={<Aws/>}/>
+              <Route index element={<FullStack/>}/>
+              <Route path="fullstack" element={<FullStack/>}/>
+              <Route path="aws" element={<Aws/>}/>
           </Route>
 
-          <Route path="contact" element={<Contact/>}/>
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="contact" element={<PrivateRouter/>}>
+              <Route path="" element={<Contact/>}/>
+          </Route>
+          
+          {/* <Route path="*" element={<NotFound/>}/> */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer/>
     </BrowserRouter>
