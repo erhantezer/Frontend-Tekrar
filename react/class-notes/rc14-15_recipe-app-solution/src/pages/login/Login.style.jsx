@@ -13,7 +13,7 @@ export const FormContainer = styled(Flex)`
   width: 40rem;
   height: 40rem;
   max-width: 50rem;
-  background: rgba(0, 173, 181, 0.5);
+  background: rgba(255, 178, 107, 0.5);
   border-radius: 50%;
   border: 2px solid #e1f1dd;
   padding: 0.5rem;

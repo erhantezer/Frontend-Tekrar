@@ -4,6 +4,7 @@ import {useState} from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const currentUser = JSON.parse(sessionStorage.getItem("user"))
   return (
     <Nav justify="space-between" wrap="wrap">
         <Logo to="/">
@@ -19,7 +20,7 @@ const Navbar = () => {
           <MenuLink to="about">About</MenuLink>
           <MenuLink to="register">Register</MenuLink>
           <MenuLink to="login" onClick={() => sessionStorage.clear()}>
-            Logout
+            {currentUser ? "Logout" : "Login"}
           </MenuLink>
         </Menu>
     </Nav>
