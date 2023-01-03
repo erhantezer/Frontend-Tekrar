@@ -3,7 +3,7 @@ import Flex from '../../components/globalStyles/Flex';
 
 export const DetailContainer = styled(Flex)`
   flex-direction: column;
-  background: #00adb5;
+  background: ${({theme}) => theme.colors.mainColor};
   min-height: calc(100vh - 75px);
   padding: 0.5rem;
 `;
@@ -32,6 +32,7 @@ export const ImgContainer = styled.div`
 export const HeaderContainer = styled(Flex)`
   margin: 25px;
   img {
+    margin-left:40px;
     width: 200px;
   }
 `;

@@ -3,6 +3,7 @@ import Flex from '../../components/globalStyles/Flex';
 
 export const MainContainer = styled(Flex)`
   flex-direction: row;
+  
 `;
 export const Card = styled(Flex)`
   flex-direction: column;
