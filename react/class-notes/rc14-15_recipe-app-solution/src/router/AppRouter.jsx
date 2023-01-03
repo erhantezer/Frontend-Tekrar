@@ -1,4 +1,5 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom"
+import { GlobalStyles } from "../components/globalStyles/Global.styles"
 import Navbar from "../components/nav/Navbar"
 import About from "../pages/about/About"
 import Detail from "../pages/detail/Detail"
@@ -10,7 +11,7 @@ import PrivateRouter from "./PrivateRouter"
 const AppRouter = () => {
   return (
     <BrowserRouter>
-    
+    <GlobalStyles/>
     <Navbar/>
     
       <Routes>

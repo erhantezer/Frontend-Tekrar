@@ -1,8 +1,28 @@
-
+import Nav, {Logo, Hamburger,Menu, MenuLink} from "./Navbar.style"
+import { GiHamburgerMenu } from 'react-icons/gi';
+import {useState} from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>Navbar</div>
+    <Nav justify="space-between" wrap="wrap">
+        <Logo to="/">
+          {"<E.T FS/> "}
+          <span>Recipe</span>
+        </Logo>
+
+        <Hamburger onClick={() => setIsOpen(!isOpen)}>
+          <GiHamburgerMenu/>
+        </Hamburger>
+        <Menu isOpen={isOpen} onClick={() => setIsOpen(false)}>
+          <MenuLink to="/">Home</MenuLink>
+          <MenuLink to="about">About</MenuLink>
+          <MenuLink to="register">Register</MenuLink>
+          <MenuLink to="login" onClick={() => sessionStorage.clear()}>
+            Logout
+          </MenuLink>
+        </Menu>
+    </Nav>
   )
 }
 
