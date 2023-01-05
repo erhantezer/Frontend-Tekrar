@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
+import  { useReducer} from 'react'
+import reducer, { initialState } from './reducer';
 
 const UseReducerExample = () => {
-    const [dog, setDog] = useState()
-    const [error, setError] = useState()
-    const [loading, setLoading] = useState(false)
+    //! 3) useReducer hooke ile ilk değerlerin reducer dan alınması ve state aktarılması
+    //! ardından değerlerin reducer.js de güncellenmesi ve buraya aktarılması
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const {dog, loading, error} = state;
+
 
 
     const fetchDog = () => {
-        setLoading(true)
+        dispatch({type: 'START'});
         fetch("https://dog.ceo/api/breeds/image/random")
             .then((res) => res.json())
             .then((data) => {
-                setDog(data.message);
-                setLoading(false);
-                console.log(data)
+                dispatch({type: "SUCCESS", payload: data.message})
             })
             .catch(() => {
-                setError("ERROR DATA CAN NOT BE FETCHED!!!!")
-                setLoading(false)
+                dispatch({ type: "FAIL", payload: 'ERROR DATA CAN NOT BE FETCHED!!' })
             })
     };
 
