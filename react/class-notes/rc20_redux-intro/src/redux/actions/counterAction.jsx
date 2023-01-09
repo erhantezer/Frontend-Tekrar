@@ -2,18 +2,15 @@
 
 import { DECREMENT, INCREMENT, RESET } from "../types/counterType";
 
-export const increment = (payload) => ({
-  type: INCREMENT,
-  payload
-});
+export const increment = (payload) => {
+    return { type: INCREMENT,payload}
+};
 
-export const decrement = (payload) => ({
-  type: DECREMENT,
-  payload
-});
+export const decrement = (payload) => {
+    return {  type: DECREMENT, payload}
+};
 
-export const reset = (payload) => ({
-  type: RESET,
-  payload
-})
+export const reset = (payload) => {
+    return {  type: RESET, payload}
+}
 
