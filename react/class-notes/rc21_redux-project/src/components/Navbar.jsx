@@ -20,7 +20,7 @@ export default function Navbar() {
       navigate("/login");
     };
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box  sx={{ position:"sticky", top:"0px",}}>
       <AppBar position="static" color="secondary">
         <Toolbar>
           <Typography
