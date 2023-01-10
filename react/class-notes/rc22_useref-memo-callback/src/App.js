@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Card from "./components/Card";
+import ClearButton from "./components/ClearButton";
 import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
 
@@ -18,8 +19,9 @@ function App() {
       })
   }, [])
 
-  // const filteredData = user?.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
+// const filteredData = user?.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
 // console.log(filteredData)
+//! useMemo ve memo birlikte kullanılmalı card tı memo ile sarmalladık
 const filteredData = useMemo(()=>{
   console.log("useMemo çalıştı")
   return user?.filter(item=> item.name.toLowerCase().includes(search.toLowerCase()));
@@ -28,6 +30,11 @@ const filteredData = useMemo(()=>{
 const handleClick = () => {
   setSearch(text)
 }
+
+const handleClear = useCallback(() => {
+  setText("");
+  setSearch("")
+},[])
 
 
   return (
@@ -58,6 +65,7 @@ const handleClick = () => {
         <Card data={filteredData} />
       </div>
       
+      <ClearButton handleClear={handleClear}/>
       <h1>useRef</h1>
     </div>
   );
