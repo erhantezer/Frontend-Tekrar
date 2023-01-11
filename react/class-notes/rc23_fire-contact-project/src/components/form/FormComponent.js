@@ -14,7 +14,7 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = () => {
+const FormComponent = ({handleSubmit, info, setInfo, add }) => {
   return (
     <Grid
       textAlign="center"
@@ -38,13 +38,13 @@ const FormComponent = () => {
       <h2 className="contact-header rounded-5">Add Contact</h2>
 
       <Box style={{ backgroundColor: "white", padding: "20px", borderRadius:"15px" }}>
-        <form>
+        <form onSubmit={handleSubmit}>
           <Stack spacing={3} direction="column">
             <TextField
               variant="outlined"
               name="username"
-              value={null}
-              onChange={null}
+              value={info.username}
+              onChange={(e) => setInfo({...info, [e.target.name]: e.target.value})}
               placeholder="Name"
               InputProps={{
                 startAdornment: (
@@ -57,8 +57,8 @@ const FormComponent = () => {
             <TextField
               variant="outlined"
               name="phoneNumber"
-              value={null}
-              onChange={null}
+              value={info.phoneNumber}
+              onChange={(e) => setInfo({...info, [e.target.name]: e.target.value})}
               placeholder="Phone Number"
               InputProps={{
                 startAdornment: (
@@ -74,8 +74,8 @@ const FormComponent = () => {
                 label="Gender"
                 name="gender"
                 variant="outlined"
-                value={null}
-                onChange={null}
+                value={info.gender}
+                onChange={(e) => setInfo({...info, [e.target.name]: e.target.value})}
               >
                 <MenuItem value="Female">Female</MenuItem>
                 <MenuItem value="Male">Male</MenuItem>
@@ -83,7 +83,7 @@ const FormComponent = () => {
               </Select>
             </FormControl>
             <Button variant="contained" type="submit" value="Submit">
-              ADD
+              {add}
             </Button>
           </Stack>
         </form>
