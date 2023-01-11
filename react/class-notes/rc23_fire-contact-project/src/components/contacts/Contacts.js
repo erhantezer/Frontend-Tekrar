@@ -8,21 +8,39 @@ import {
   TableBody,
   Paper,
 } from "@mui/material";
+import { useFetch } from "../../utils/firebase";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 
 const Contacts = () => {
+
+  const {isLoading, contactList } = useFetch();
+
+
+
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
-            <TableRow>
-              <TableCell>Username</TableCell>
-              <TableCell align="left">Phone Number</TableCell>
-              <TableCell align="left">Gender</TableCell>
-              <TableCell align="left">Delete</TableCell>
-              <TableCell align="left">Edit</TableCell>
-            </TableRow>
+          {contactList?.map((item, index) => {
+            const {username, phoneNumber, gender} =item;
+            return(
+              <TableRow key={index}>
+                  <TableCell align="left">{username}</TableCell>
+                  <TableCell align="left">{phoneNumber} </TableCell>
+                  <TableCell align="left">{gender} </TableCell>
+                  <TableCell align="left">
+                    <DeleteIcon/>
+                  </TableCell>
+                  <TableCell align="left">
+                  <EditIcon />
+                  </TableCell>
+              </TableRow>
+            )
+          })}
+  
           </TableHead>
 
           <TableBody>

@@ -1,5 +1,6 @@
 import { getDatabase, ref, set, onValue, child, push, update  } from "firebase/database";
 import { initializeApp } from "firebase/app";
+import { useEffect, useState } from "react";
 
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -20,50 +21,67 @@ const app = initializeApp(firebaseConfig);
 
 //! Write data
 
-function writeUserData(userId, name, email, imageUrl) {
-  const db = getDatabase();
-  set(ref(db, 'users/' + userId), {
-    username: name,
-    email: email,
-    profile_picture : imageUrl
+export function writeUserData(info) {
+  const db = getDatabase(app);
+  set(ref(db, 'users/'), {
+    username: info.username,
+    phoneNumber: info.phoneNumber,
+    gender : info.gender
   });
 }
 
 
 //! Read data
+//! costom hook içinde state tanımlayabilirsin o yüzden use ile başlayan fonk. adı bulduk
+export const useFetch = () => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [contactList,setContactList]= useState();
 
-const db = getDatabase();
-const starCountRef = ref(db, 'posts/' + postId + '/starCount');
-onValue(starCountRef, (snapshot) => {
-  const data = snapshot.val();
-  updateStarCount(postElement, data);
-});
+    useEffect(() => {
+        const db = getDatabase(app);
+        const starCountRef = ref(db, 'users/');
+        onValue(starCountRef, (snapshot) => {
+        const data = snapshot.val();
+        const userArray=[];
 
+        for(let id in data) {
+            userArray.push({id, ...data[id]})
+        }
+        setContactList(userArray)
+        setIsLoading(false)
+    });
+    }, []);
+
+    return {isLoading,contactList}
+    
+ 
+
+}
 
 
 
 //! Update
 
-function writeNewPost(uid, username, picture, title, body) {
-  const db = getDatabase();
+// function writeNewPost(uid, username, picture, title, body) {
+//   const db = getDatabase();
 
-  // A post entry.
-  const postData = {
-    author: username,
-    uid: uid,
-    body: body,
-    title: title,
-    starCount: 0,
-    authorPic: picture
-  };
+//   // A post entry.
+//   const postData = {
+//     author: username,
+//     uid: uid,
+//     body: body,
+//     title: title,
+//     starCount: 0,
+//     authorPic: picture
+//   };
 
-  // Get a key for a new Post.
-  const newPostKey = push(child(ref(db), 'posts')).key;
+//   // Get a key for a new Post.
+//   const newPostKey = push(child(ref(db), 'posts')).key;
 
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  const updates = {};
-  updates['/posts/' + newPostKey] = postData;
-  updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+//   // Write the new post's data simultaneously in the posts list and the user's post list.
+//   const updates = {};
+//   updates['/posts/' + newPostKey] = postData;
+//   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
-  return update(ref(db), updates);
-}
+//   return update(ref(db), updates);
+// }
