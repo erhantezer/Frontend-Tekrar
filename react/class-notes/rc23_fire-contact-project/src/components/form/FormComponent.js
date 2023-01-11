@@ -14,39 +14,39 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = ({handleSubmit, info, setInfo, add }) => {
-
-
-  const handleChange = (e) => {
-    setInfo({...info, [e.target.name]: e.target.value})
-    console.log(info)
+const FormComponent = ({info,setInfo,handleSubmit,isAdd}) => {
+  const handleChange=(e)=>{
+    e.preventDefault();
+    // const name=e.target.name;
+    // const value=e.target.value; 
+    const {name,value}=e.target;
+   setInfo({...info,[name]:value})
+   console.log(info)
   }
-
   return (
     <Grid
       textAlign="center"
       verticalalign="middle"
-      // direction="column"
       style={{ width: "300" }}
     >
       
-        <div className="contact-header rounded-5">
+        <div className="contact-header">
           <a
-            href="https://github.com/erhantezer"
+            href="https://clarusway.com/"
             className="design"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{"<ErhanGithub/> "}</code>
+            <code>{"<Clarusway/> "}</code>
           </a>
         </div>
         <span className="design header">design</span>
       
-      <h2 className="contact-header rounded-5">Add Contact</h2>
+      <h2 className="contact-header">Add Contact</h2>
 
-      <Box style={{ backgroundColor: "white", padding: "20px", borderRadius:"15px" }}>
+      <Box style={{ backgroundColor: "white", padding: "20px" }}>
         <form onSubmit={handleSubmit}>
-          <Stack spacing={3} direction="column">
+          <Stack spacing={3} >
             <TextField
               variant="outlined"
               name="username"
@@ -90,7 +90,7 @@ const FormComponent = ({handleSubmit, info, setInfo, add }) => {
               </Select>
             </FormControl>
             <Button variant="contained" type="submit" value="Submit">
-              {add}
+            {isAdd}
             </Button>
           </Stack>
         </form>
