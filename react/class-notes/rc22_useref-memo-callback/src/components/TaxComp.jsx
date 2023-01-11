@@ -1,8 +1,12 @@
 import React from 'react'
 
-const TaxComp = () => {
+const TaxComp = ({taxData}) => {
+    console.log("Render => TaxComp components")
     return (
-        <div>TaxComp</div>
+        <>
+            <div>TaxComp : {JSON.stringify(taxData.current)}</div>
+            {/* <div>TaxComp : {JSON.stringify(taxData)}</div> */}
+        </>
     )
 }
 
