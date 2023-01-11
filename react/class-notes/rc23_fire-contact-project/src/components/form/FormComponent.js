@@ -15,6 +15,13 @@ import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
 const FormComponent = ({handleSubmit, info, setInfo, add }) => {
+
+
+  const handleChange = (e) => {
+    setInfo({...info, [e.target.name]: e.target.value})
+    console.log(info)
+  }
+
   return (
     <Grid
       textAlign="center"
@@ -44,7 +51,7 @@ const FormComponent = ({handleSubmit, info, setInfo, add }) => {
               variant="outlined"
               name="username"
               value={info.username}
-              onChange={(e) => setInfo({...info, [e.target.name]: e.target.value})}
+              onChange={handleChange}
               placeholder="Name"
               InputProps={{
                 startAdornment: (
@@ -58,7 +65,7 @@ const FormComponent = ({handleSubmit, info, setInfo, add }) => {
               variant="outlined"
               name="phoneNumber"
               value={info.phoneNumber}
-              onChange={(e) => setInfo({...info, [e.target.name]: e.target.value})}
+              onChange={handleChange}
               placeholder="Phone Number"
               InputProps={{
                 startAdornment: (
@@ -75,7 +82,7 @@ const FormComponent = ({handleSubmit, info, setInfo, add }) => {
                 name="gender"
                 variant="outlined"
                 value={info.gender}
-                onChange={(e) => setInfo({...info, [e.target.name]: e.target.value})}
+                onChange={handleChange}
               >
                 <MenuItem value="Female">Female</MenuItem>
                 <MenuItem value="Male">Male</MenuItem>

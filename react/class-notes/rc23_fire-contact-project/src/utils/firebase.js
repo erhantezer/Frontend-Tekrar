@@ -41,28 +41,49 @@ export const writeUserData = (info) => {
 
 //! Read data
 //! costom hook içinde state tanımlayabilirsin o yüzden use ile başlayan fonk. adı bulduk
-export const useFetch = () => {
-    const [isLoading, setIsLoading] = useState(true);
+// export const useFetch = () => {
+//     const [isLoading, setIsLoading] = useState(true);
+//     const [contactList,setContactList]= useState();
+
+//     useEffect(() => {
+//         const db = getDatabase(app);
+//         const starCountRef = ref(db, 'users/');
+//         onValue(starCountRef, (snapshot) => {
+//         const data = snapshot.val();
+//         const userArray=[];
+
+//         for(let id in data) {
+//             userArray.push({id, ...data[id]})
+//         }
+//         setContactList(userArray)
+//         setIsLoading(false)
+//     });
+//     }, []);
+
+//     return {isLoading, contactList}
+
+// }
+export const useFetch=()=>{
+    const [isLoading,setIsLoading]=useState(true);
     const [contactList,setContactList]= useState();
 
     useEffect(() => {
-        const db = getDatabase(app);
-        const starCountRef = ref(db, 'users/');
-        onValue(starCountRef, (snapshot) => {
-        const data = snapshot.val();
-        const userArray=[];
+        const db=getDatabase(app)
+        const userRef=ref(db,"users/")
 
-        for(let id in data) {
-            userArray.push({id, ...data[id]})
-        }
-        setContactList(userArray)
-        setIsLoading(false)
-    });
-    }, []);
+        onValue(userRef,(snapshot)=>{
+            const data = snapshot.val();
+            const userArray=[]
 
-    return {isLoading, contactList}
-    
- 
+            for(let id in data){
+                userArray.push({id,...data[id]})
+            }
+            setContactList(userArray)
+            setIsLoading(false)
+        })
+       
+    },[])
+    return {isLoading,contactList}
 
 }
 
