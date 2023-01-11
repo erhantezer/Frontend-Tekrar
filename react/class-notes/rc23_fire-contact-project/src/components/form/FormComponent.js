@@ -18,12 +18,12 @@ const FormComponent = ({handleSubmit, info, setInfo, add }) => {
   return (
     <Grid
       textAlign="center"
-      verticalAlign="middle"
-      direction="column"
+      verticalalign="middle"
+      // direction="column"
       style={{ width: "300" }}
     >
-      <p className="contact-header rounded-5">
-        <div>
+      
+        <div className="contact-header rounded-5">
           <a
             href="https://github.com/erhantezer"
             className="design"
@@ -34,7 +34,7 @@ const FormComponent = ({handleSubmit, info, setInfo, add }) => {
           </a>
         </div>
         <span className="design header">design</span>
-      </p>
+      
       <h2 className="contact-header rounded-5">Add Contact</h2>
 
       <Box style={{ backgroundColor: "white", padding: "20px", borderRadius:"15px" }}>

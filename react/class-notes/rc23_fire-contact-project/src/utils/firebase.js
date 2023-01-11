@@ -1,4 +1,12 @@
-import { getDatabase, ref, set, onValue, child, push, update  } from "firebase/database";
+import { 
+    getDatabase, 
+    ref, 
+    set, 
+    onValue, 
+    // child, 
+    // push, 
+    // update  
+} from "firebase/database";
 import { initializeApp } from "firebase/app";
 import { useEffect, useState } from "react";
 
@@ -21,7 +29,7 @@ const app = initializeApp(firebaseConfig);
 
 //! Write data
 
-export function writeUserData(info) {
+export const writeUserData = (info) => {
   const db = getDatabase(app);
   set(ref(db, 'users/'), {
     username: info.username,
@@ -52,7 +60,7 @@ export const useFetch = () => {
     });
     }, []);
 
-    return {isLoading,contactList}
+    return {isLoading, contactList}
     
  
 
