@@ -40,9 +40,9 @@ const handleClear = useCallback(() => {
   return (
     <div className="container mt-2">
       <div>
-        <Header />
+        <Header count={count < 4 ? 0 : count}/>
         
-        <HeaderMemo />
+        <HeaderMemo count={count < 4 ? 0 : count}/>
       </div>
       
       <div>
@@ -78,7 +78,7 @@ export default App;
 // ilgili componente gönderilen değer değiştiğinde sardığı componenti tekrar render ettirir. 
 // faydasız kaldığı yer object tipli verilerdir. onu engellemenin yolu da useMemo kullanmak 
 
-//useMemo
+//!useMemo
 // Shallow comparison’da eğer karşılaştırılan tipler nesne (Object) ise içerisindeki
  // değerleri değil referans değerleri karşılaştırılır. Eğer karşılaştırılan nesneler
  // memory’de aynı adresi gösteriyorsa true göstermiyorsa false olarak değer döndürür.
