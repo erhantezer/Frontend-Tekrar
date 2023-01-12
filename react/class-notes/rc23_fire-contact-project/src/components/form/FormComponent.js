@@ -32,19 +32,19 @@ const FormComponent = ({info,setInfo,handleSubmit,isAdd}) => {
       
         <div className="contact-header">
           <a
-            href="https://clarusway.com/"
+            href="https://github.com/erhantezer"
             className="design"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{"<Clarusway/> "}</code>
+            <code>{"<ErhanGithub/> "}</code>
           </a>
         </div>
-        <span className="design header">design</span>
+        
       
       <h2 className="contact-header">Add Contact</h2>
 
-      <Box style={{ backgroundColor: "white", padding: "20px" }}>
+      <Box style={{ backgroundColor: "white", padding: "20px", borderRadius:"15px" }}>
         <form onSubmit={handleSubmit}>
           <Stack spacing={3} >
             <TextField

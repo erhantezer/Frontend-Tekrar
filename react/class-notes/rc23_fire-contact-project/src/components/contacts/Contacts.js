@@ -16,16 +16,16 @@ const Contacts = ({editUser}) => {
   const { isLoading, contactList } = useFetch();
   return (
     <div>
-      <h2 className="contact-header">Contacts</h2>
+      <h2 className="contact-header border rounded-5">Contacts</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Username</TableCell>
-              <TableCell align="left">Phone Number</TableCell>
-              <TableCell align="left">Gender</TableCell>
-              <TableCell align="left">Delete</TableCell>
-              <TableCell align="left">Edit</TableCell>
+              <TableCell sx={{fontWeight:"900" }}>Username</TableCell>
+              <TableCell sx={{fontWeight:"900" }} align="left">Phone Number</TableCell>
+              <TableCell sx={{fontWeight:"900" }} align="left">Gender</TableCell>
+              <TableCell sx={{fontWeight:"900" }} align="left">Delete</TableCell>
+              <TableCell sx={{fontWeight:"900" }} align="left">Edit</TableCell>
             </TableRow>
           </TableHead>
 
@@ -51,8 +51,8 @@ const Contacts = ({editUser}) => {
                 </TableRow>
               ) : (
                 // Bilgiler geldiği zaman aşağıya yazılacak kodlar çalışsın
-                contactList?.map((item, index) => (
-                  <TableRow>
+                contactList?.map((item) => (
+                  <TableRow key={item.id}>
                     <TableCell align="center">{item.username} </TableCell>
                     <TableCell align="center">{item.phoneNumber} </TableCell>
                     <TableCell align="center">{item.gender} </TableCell>
