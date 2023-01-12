@@ -15,13 +15,12 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export default function Login() {
- 
-
+export default function Register() {
+;
 
     return (
         <ThemeProvider theme={theme}>
-            <Grid container component="main" sx={{ height: '93.2vh' }}>
+            <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />
                 <Grid
                     item
@@ -51,9 +50,8 @@ export default function Login() {
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
-                            Login
+                            Sign in
                         </Typography>
-
 
                     </Box>
                 </Grid>
