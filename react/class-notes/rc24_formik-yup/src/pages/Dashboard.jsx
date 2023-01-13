@@ -19,7 +19,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         error && toastErrorNotify("logout can not be performed");
-      }, [error]);
+    }, [error]);
 
 
     return (
