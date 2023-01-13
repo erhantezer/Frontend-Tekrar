@@ -1,8 +1,8 @@
-import * as React from 'react';
+import {useEffect} from 'react';
 import Avatar from '@mui/material/Avatar';
 import { LoadingButton } from '@mui/lab';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -10,8 +10,11 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import * as Yup from 'yup';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { TextField } from '@mui/material';
+import useAuthCall from '../hooks/useAuthCall';
+import { useSelector } from 'react-redux';
+import { toastErrorNotify, toastSuccessNotify } from '../helper/ToastNotify';
 
 
 
@@ -20,21 +23,37 @@ const theme = createTheme();
 
 const loginSchema = Yup.object().shape({
     email: Yup
-    .string("Please enter valid email")
-    .email("Please  enter an email"),
+        .string("Please enter valid email")
+        .email("Please  enter an email"),
     password: Yup
-    .string()
-    .required("Please enter a password")
-    .min(6, "Password must have min 6 chars")
-    .max(16, "Password must have max 16 chars")
-    .matches(/\d+/, "Password must have a number")
-    .matches(/[a-z]+/, "Password must have a lowercase")
-    .matches(/[A-Z]+/, "Password must have an uppercase")
-    .matches(/[!,?{}><%&$#£+-.]+/, " Password must have a special char"),
+        .string()
+        .required("Please enter a password")
+        .min(6, "Password must have min 6 chars")
+        .max(16, "Password must have max 16 chars")
+        .matches(/\d+/, "Password must have a number")
+        .matches(/[a-z]+/, "Password must have a lowercase")
+        .matches(/[A-Z]+/, "Password must have an uppercase")
+        .matches(/[!,?{}><%&$#£+-.]+/, " Password must have a special char"),
 });
 
 export default function Login() {
+    const navigate = useNavigate();
+    const {login} = useAuthCall();
 
+    const { currentUser, error, loading } = useSelector((state) => state?.auth)
+
+    useEffect(() => {
+        if (currentUser) {
+          navigate("/stock");
+          toastSuccessNotify("Login Performed");
+        }
+      }, [currentUser]);
+
+
+
+      useEffect(() => {
+        error && toastErrorNotify("Login can not e performed");
+      }, [error]);
 
 
     return (
@@ -63,13 +82,13 @@ export default function Login() {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            
+
                         }}
                     >
-                        <Avatar  sx={{ m: 1, width:"50px",height:"50px" }}>
-                            <LockOutlinedIcon/>
+                        <Avatar sx={{ m: 1, width: "50px", height: "50px" }}>
+                            <LockOutlinedIcon />
                         </Avatar>
-                        <Typography component="h1" variant="h5" sx={{marginBottom:"10px"}}>
+                        <Typography component="h1" variant="h5" sx={{ marginBottom: "10px" }}>
                             Login
                         </Typography>
 
@@ -77,57 +96,61 @@ export default function Login() {
                             initialValues={{ email: '', password: '' }}
                             validationSchema={loginSchema}
                             onSubmit={(values, { actions }) => {
+                                login(values);
+                                navigate("/stock");
+                                actions.resetForm();
+                                actions.setSubmitting(false);
                             }}
                         >
 
-                        {({
-                        values, 
-                        handleChange, 
-                        handleBlur,
-                        errors,
-                        touched,
-                        }) => (
-                            <Form>
-                                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                                    <TextField
-                                    label="Email"
-                                    name='email'
-                                    id="email"
-                                    type="email"
-                                    variant="outlined"
-                                    value={values.email}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    error={touched.email && Boolean(errors.email)}
-                                    helperText={touched.email && errors.email}
-                                    sx={{ width: 400 }}
-                                    />
+                            {({
+                                values,
+                                handleChange,
+                                handleBlur,
+                                errors,
+                                touched,
+                            }) => (
+                                <Form>
+                                    <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                                        <TextField
+                                            label="Email"
+                                            name='email'
+                                            id="email"
+                                            type="email"
+                                            variant="outlined"
+                                            value={values.email}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            error={touched.email && Boolean(errors.email)}
+                                            helperText={touched.email && errors.email}
+                                            sx={{ width: 300 }}
+                                        />
 
-                                    <TextField
-                                    label="Password"
-                                    name='password'
-                                    id="password"
-                                    type="password"
-                                    variant="outlined"
-                                    value={values.password}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    error={touched.password && Boolean(errors.password)}
-                                    helperText={touched.password && errors.password}
-                                    />
+                                        <TextField
+                                            label="Password"
+                                            name='password'
+                                            id="password"
+                                            type="password"
+                                            variant="outlined"
+                                            value={values.password}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            error={touched.password && Boolean(errors.password)}
+                                            helperText={touched.password && errors.password}
+                                        />
 
-                                    <LoadingButton
-                                    type='submit'
-                                    loading={false}
-                                    loadingPosition="center"
-                                    variant="contained"
-                                    >
-                                        Submit
-                                    </LoadingButton>
-                                    
-                                </Box>
-                            </Form>
-                        )}
+                                        <LoadingButton
+                                            type='submit'
+                                            loading={loading}
+                                            loadingPosition="center"
+                                            variant="contained"
+                                        >
+                                            Submit
+                                        </LoadingButton>
+
+                                    </Box>
+                                </Form>
+                            )}
                         </Formik>
                         <Box sx={{ textAlign: "center", mt: 2 }}>
                             <Link to="/register">Do you have not an account?</Link>

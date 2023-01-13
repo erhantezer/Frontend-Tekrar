@@ -103,7 +103,7 @@ export default function Register() {
                                     onBlur={handleBlur}
                                     error={touched.name && Boolean(errors.name)}
                                     helperText={touched.name && errors.name}
-                                    sx={{ width: 400 }}
+                                    sx={{ width: 300 }}
                                     />
                                     <TextField
                                     label="Last Name"
@@ -116,7 +116,7 @@ export default function Register() {
                                     onBlur={handleBlur}
                                     error={touched.lastName && Boolean(errors.lastName)}
                                     helperText={touched.lastName && errors.lastName}
-                                    sx={{ width: 400 }}
+                                    sx={{ width: 300 }}
                                     />
                                     <TextField
                                     label="Email"
@@ -129,7 +129,7 @@ export default function Register() {
                                     onBlur={handleBlur}
                                     error={touched.email && Boolean(errors.email)}
                                     helperText={touched.email && errors.email}
-                                    sx={{ width: 400 }}
+                                    sx={{ width: 300 }}
                                     />
 
                                     <TextField
